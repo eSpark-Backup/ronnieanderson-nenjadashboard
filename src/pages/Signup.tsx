@@ -12,7 +12,7 @@ const SignUp = () => {
           <CustomInput type={"text"} required label="Sponsor Username" placeholder="NENJA123456789" />
           <Box width="100%" mt={2}>
             <Typography mb={1} textAlign="center">Already have an account?</Typography>
-            <CustomButton>Sign in</CustomButton>
+            <CustomButton sx={{ height: "50px" }}>Sign in</CustomButton>
           </Box>
         </Stack>
       </Box>
