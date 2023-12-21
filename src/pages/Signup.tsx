@@ -1,5 +1,5 @@
 import { Box, Checkbox, FormControlLabel, Stack, Typography } from '@mui/material';
-import { CustomButton, CustomInput, CustomSelector } from '../components';
+import { CustomButton, CustomInput, CustomPhone, CustomSelector } from '../components';
 import logoImage from "../assets/Dashboard_logo.png";
 import { SigupData } from '../constants';
 import React from 'react';
@@ -16,11 +16,14 @@ const SignUp = () => {
               <React.Fragment key={index}>
                 {eachInput?.type === "select" ?
                   <CustomSelector options={eachInput?.options} required={eachInput?.required} label={eachInput?.label} placeholder={eachInput?.placeholder} />
-                  :
+                  : eachInput?.type === "phone" ?
+                    <CustomPhone  />
+                    :
                 <CustomInput type={eachInput?.type} required={eachInput?.required} label={eachInput?.label} placeholder={eachInput?.placeholder} />}
               </React.Fragment>
 
             ))}
+      
               <FormControlLabel control={<Checkbox defaultChecked />} label="I have read and accepted the terms & conditions of Nenja (click here to read)" />
           
           </Stack>

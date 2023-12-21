@@ -9,3 +9,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.special-label {
+  display: none !important;
+}
+
+.form-control  {
+  width: 100% !important  ;
+}
+
+.react-tel-input .form-control {
+  border : 1px solid #ecebeb !important;
+  border-radius: 5px !important;
+}
+
+/* on active  */
+.react-tel-input .form-control:focus {
+  border : 1px solid #1D3B6A !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+}
