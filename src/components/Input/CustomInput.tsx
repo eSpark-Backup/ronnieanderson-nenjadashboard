@@ -47,4 +47,4 @@ const CustomInput = ({ startIcon, required, label, placeholder, type, sx }: IPro
   )
 }
 
-export default CustomInput
+export default CustomInput;
