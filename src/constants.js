@@ -35,5 +35,18 @@ export const SigupData = [
         type: "email",
         required: false,
         placeholder: "xyz@gmail.com"
-    }
+    },
+    {
+        label: "Password",
+        type: "password",
+        required: false,
+        placeholder: "Enter your password"
+    },
+    {
+        label: "Confirm Password",
+        type: "password",
+        required: false,
+        placeholder: "Enter your confirm password"
+    },
+   
 ]

@@ -192,9 +192,9 @@ export const theme = createTheme({
             contrastText: "#FFFFFF",
         },
         secondary: {
-            main: "#34a6b1",
-            light: "#48afb9",
-            dark: "#2f959f",
+            main: "#E2E2E2",
+            light: "#E2E2E2",
+            dark: "#E2E2E2",
             contrastText: "#FFFFFF",
         },
         success: {
@@ -261,8 +261,9 @@ export const theme = createTheme({
         button: {
             fontWeight: 700,
         },
-        fontFamily: `"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-			 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`,
+        fontFamily: `"Montserrat", "sans-serif"`,
+        // fontFamily: `"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+		// 	 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`,
         body1: {
             fontSize: "1rem",
             fontWeight: 400,
