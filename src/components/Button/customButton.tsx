@@ -3,11 +3,12 @@ import { ReactElement } from 'react'
 
 interface IProps {
     children: ReactElement | string
+    sx?: any
 }
 
-const CustomButton = ({ children }: IProps) => {
+const CustomButton = ({ sx, children }: IProps) => {
     return (
-        <Button variant="contained" sx={{ width: "100%", height: "50px", backgroundColor: "#1D3B6A", borderRadius: "10px" }}>{children}</Button>
+        <Button variant="contained" sx={{ width: "100%", height: "50px", backgroundColor: "#1D3B6A", borderRadius: "10px", ...sx }}>{children}</Button>
     )
 }
 
