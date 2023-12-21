@@ -31,6 +31,12 @@ export const SigupData = [
         placeholder: "India"
     },
     {
+        label: "Phone Number",
+        type: "phone",
+        required: false,
+        placeholder: "Enter your phone number"
+    },
+    {
         label: "Email Address",
         type: "email",
         required: false,
