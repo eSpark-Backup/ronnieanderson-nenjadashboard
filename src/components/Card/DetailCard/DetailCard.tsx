@@ -7,8 +7,8 @@ import diamond2 from "../../../assets/Mask Group 4.png"
 
 const DetailCard = () => {
     const isSm = useMediaQuery((theme: MuiTheme) => theme.breakpoints.up("sm"));
-    const counts = 1000;
-    const totalCounts = 200
+    const counts = 200;
+    const totalCounts = 1000
     const percentage = (counts / totalCounts) * 100;
 
     return (

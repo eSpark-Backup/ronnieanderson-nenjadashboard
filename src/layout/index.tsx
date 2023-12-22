@@ -44,8 +44,7 @@ const LoggedinLayout = () => {
                             <MenuIcon />
                         </IconButton>}
                     <Box sx={{
-                        padding: "0 40px",
-                        paddingTop: "130px",
+                        padding: "130px 40px 40px",
                         height: "100% !important",
                         overflowY: "scroll",
                         "::-webkit-scrollbar": { width: "0" }

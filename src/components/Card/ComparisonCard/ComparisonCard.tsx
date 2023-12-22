@@ -1,4 +1,4 @@
-import { Box, Divider, Typography } from '@mui/material'
+import { Box, Divider, Stack, Typography } from '@mui/material'
 import CardLayout from '../CardLayout/CardLayout'
 import ComparisionHeader from './ComparisionHeader'
 import Team from "../../../assets/team.png";
@@ -8,7 +8,7 @@ import ComparsionStatus from '../ComparsionStatus/ComparsionStatus';
 
 const ComparisonCard = () => {
   return (
-    <CardLayout sx={{ maxWidth: "345px" }}>
+    <CardLayout >
       <Box>
         <Box sx={{ display: "flex", justifyContent: "center" }} >
           <ComparisionHeader image={Team} heading={"Team"} />
@@ -22,26 +22,28 @@ const ComparisonCard = () => {
 
         <Box sx={{ display: "flex", p: 3 }}>
           <Box sx={{ width: "20%" }}>
+          <Stack sx={{gap:"10px"}}>
             <Box sx={{ visibility: "hidden" }}>
               hidden
             </Box>
-            <Box sx={{ mt: "18px" }}>
+            <Box sx={{ mt: "15px" }}>
               <Typography sx={{ fontSize: 14, fontWeight: 600, mt: "5px" }}>Left</Typography>
-              <Typography sx={{ fontSize: 14, fontWeight: 600, mt: "5px" }}>Right</Typography>
+              <Typography sx={{ fontSize: 14, fontWeight: 600, mt: "10px" }}>Right</Typography>
             </Box>
+            </Stack>
           </Box>
 
           <Box sx={{ width: "80%", display: "flex", justifyContent: "space-between" }}>
-            <Box>
+            <Stack sx={{gap:"10px"}}>
               <ComparisionHeader size="sm" image={Direct} heading='Directs' />
               <ComparsionStatus />
               <ComparsionStatus />
-            </Box>
-            <Box>
+            </Stack>
+            <Stack sx={{gap:"10px"}}>
               <ComparisionHeader size="sm" image={Direct} heading='Donwline' />
               <ComparsionStatus />
               <ComparsionStatus />
-            </Box>
+            </Stack>
           </Box>
         </Box>
       </Box>
