@@ -20,4 +20,13 @@ declare global {
         childs: { href: string; title: string }[] | null;
         type?: string;
     }
+
+    interface IStatusCard {
+        icon: string | ReactNode,
+        heading: string,
+        value: string,
+        focus?: boolean,
+        extraInfo?: ReactNode
+        notIcon?: boolean
+    }
 }

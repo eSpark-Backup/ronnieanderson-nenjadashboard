@@ -4,12 +4,51 @@ import { Theme as MuiTheme } from "@mui/material/styles";
 import StatusCard from '../StatusCard/StatusCard'
 import diamond from "../../../assets/RANK ICONS_Final_Emerald.png"
 import diamond2 from "../../../assets/Mask Group 4.png"
+import totalEarning from "../../../assets/Total Earnings.png"
+import DailyProfit from "../../../assets/Group 2214.png"
+import AvailableBalance from "../../../assets/Available Balance.png"
 
 const DetailCard = () => {
     const isSm = useMediaQuery((theme: MuiTheme) => theme.breakpoints.up("sm"));
     const counts = 200;
     const totalCounts = 1000
     const percentage = (counts / totalCounts) * 100;
+    const radialPerc = 70
+
+    const status: IStatusCard[] = [
+        {
+            icon: totalEarning,
+            heading: "Total Earnings",
+            value: "$10,000",
+            focus: true,
+            extraInfo: <Typography><span style={{ color: "#8DC63F", fontWeight: 500 }}>+$64</span> This week</Typography>
+        },
+        {
+            icon: DailyProfit,
+            heading: "Daily Profit",
+            value: "$8,000",
+            focus: false,
+        },
+        {
+            icon: AvailableBalance,
+            heading: "Available Balance",
+            value: "$15,000",
+            focus: false,
+        },
+        {
+            icon:
+                <Stack justifyContent="center" alignItems="center" sx={{ width: "40px", height: "40px", borderRadius: "50%", background: `radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(#8DC63F ${radialPerc}%, #E2E2E2 0)` }}>
+                    <Stack justifyContent="center" alignItems="center">
+                        <Typography lineHeight="8px" fontSize="12px" fontWeight={600}>15</Typography>
+                        <Typography fontSize="8px">Days</Typography>
+                    </Stack>
+                </Stack>,
+            heading: "Fast Start",
+            value: "$5,000",
+            focus: false,
+            notIcon: true,
+        },
+    ]
 
     return (
         <CardLayout sx={{ p: { xs: 1, md: 5 } }}>
@@ -21,11 +60,10 @@ const DetailCard = () => {
                         <Typography color="#000" variant='h5'>Emerald</Typography>
                     </Stack>
                 </Grid>
-                <Grid py={5} container item xs={12} md={5} spacing={2}>
-                    <Grid sx={{ display: "flex" }} alignItems="center" justifyContent="center" item xs={12} sm={6}><StatusCard /></Grid>
-                    <Grid sx={{ display: "flex" }} alignItems="center" justifyContent="center" item xs={12} sm={6}><StatusCard /></Grid>
-                    <Grid sx={{ display: "flex" }} alignItems="center" justifyContent="center" item xs={12} sm={6}><StatusCard /></Grid>
-                    <Grid sx={{ display: "flex" }} alignItems="center" justifyContent="center" item xs={12} sm={6}><StatusCard /></Grid>
+                <Grid py={5} sx={{ display: "flex" }} alignItems="center" container item xs={12} md={5} spacing={2}>
+                    {status.map((item: IStatusCard, index: number) => {
+                        return <Grid key={index} sx={{ display: "flex" }} alignItems="flex-start" justifyContent="center" item xs={12} sm={6}><StatusCard {...item} /></Grid>
+                    })}
                 </Grid>
                 <Grid item xs={12} md={3.5}>
                     <Stack>
