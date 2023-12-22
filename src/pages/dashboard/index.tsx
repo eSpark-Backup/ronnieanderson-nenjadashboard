@@ -1,8 +1,11 @@
-import React from 'react'
+import { ComparisonCard, MultiplierCard } from "../../components"
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+   <ComparisonCard/>
+   <MultiplierCard/>
+    </div>
   )
 }
 

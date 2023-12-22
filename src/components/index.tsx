@@ -3,6 +3,8 @@ import CustomButton from './Button/customButton'
 import CustomSelector from './Input/CustomSelector'
 import CustomPhone from './Input/CustomPhone'
 import Logo from "./logo"
+import ComparisonCard from "./Card/ComparisonCard/ComparisonCard"
+import MultiplierCard from "./Card/MultiplierCard/MultiplierCard"
 
 export {
     CustomInput,
@@ -10,4 +12,6 @@ export {
     CustomSelector,
     CustomPhone,
     Logo,
+    ComparisonCard,
+    MultiplierCard,
 }
