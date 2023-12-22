@@ -17,8 +17,6 @@ export const NavItem = (props: ISidebarItem) => {
         navigate("/sign-in")
     }
 
-    console.log(router.pathname.split("/")[1] , href.split("/")[1] )
-
     useEffect(() => {
         setActive(href
             ? router.pathname.split("/")[1] === href.split("/")[1] ||
@@ -30,8 +28,6 @@ export const NavItem = (props: ISidebarItem) => {
         const activeChildParent = activeParent.replace("/", "") === href.split("/")[1];
         setActiveChildParent(activeChildParent)
     }, [activeParent, href])
-
-    console.log(active, 'active')
 
     if (childs) {
         return (
@@ -52,7 +48,7 @@ export const NavItem = (props: ISidebarItem) => {
                         sx={{
                             fontWeight: 700,
                             p: 1.5,
-                            background: (activeChildParent || active) ? "#E2E2E2" : "",
+                            background: activeChildParent ? "#E2E2E2" : "",
                             justifyContent: "space-between",
                             lineHeight: 0,
                         }}
@@ -92,7 +88,7 @@ export const NavItem = (props: ISidebarItem) => {
                                     lineHeight: 0,
                                     padding: "24px 16px 24px 9px",
                                     my: 0.2,
-                                    background: "transparent",
+                                    background: router.pathname === item.href ? "#E2E2E2" : "transparent",
                                     ml: 0.5,
                                 }}
                                 disableRipple
@@ -121,6 +117,7 @@ export const NavItem = (props: ISidebarItem) => {
                 onClick={() => navigate(href)}
                 fullWidth
                 sx={{
+                    background: (activeChildParent || active) ? "#E2E2E2" : "",
                     fontWeight: 700,
                     p: 1.5,
                     justifyContent: "space-between",
