@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material'
 import Multiplier from '../../../assets/Multiplier.png'
 import CardLayout from '../CardLayout/CardLayout'
 import StatusCard from '../StatusCard/StatusCard'
+import Amount from "../../../assets/Amount.png"
 
 const MultiplierCard = () => {
     return (
@@ -27,7 +28,7 @@ const MultiplierCard = () => {
                     md: "70%"
                 }, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                     <Box>
-                        <StatusCard />
+                        <StatusCard icon={Amount} heading="Portfolio" value="$100,000" focus />
                     </Box>
                 </Box>
             </Box>
