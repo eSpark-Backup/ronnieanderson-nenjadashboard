@@ -3,6 +3,7 @@ import { ComparisonCard, DetailCard, MultiplierCard } from "../../components"
 import Referral from "../../components/Referral"
 import Tabs from "../../components/Tabs"
 import limitCardbg from "../../assets/5x-bg.png"
+import { ActiveInacitveData, BussinsessData, TeamData } from "../../constants"
 
 
 const Dashboard = () => {
@@ -18,9 +19,9 @@ const Dashboard = () => {
       </Grid>
       <Grid item xs={12}><DetailCard /></Grid>
       <Grid item xs={12} lg={8}><MultiplierCard /></Grid>
-      <Grid item xs={12} md={6} lg={4}><ComparisonCard/></Grid>
-      <Grid item xs={12} md={6} lg={4}><ComparisonCard /></Grid>
-      <Grid item xs={12} md={6} lg={4}><ComparisonCard /></Grid>
+      <Grid item xs={12} md={6} lg={4}><ComparisonCard data={BussinsessData}  /></Grid>
+      <Grid item xs={12} md={6} lg={4}><ComparisonCard data={TeamData}  /></Grid>
+      <Grid item xs={12} md={6} lg={4}><ComparisonCard data={ActiveInacitveData}  /></Grid>
       <Grid item xs={12} md={6} lg={4}>
         {/* <Box
         sx={{

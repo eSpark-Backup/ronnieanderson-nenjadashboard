@@ -6,12 +6,20 @@ import Direct from "../../../assets/Directs.png";
 import ComparsionStatus from '../ComparsionStatus/ComparsionStatus';
 
 
-const ComparisonCard = () => {
+const ComparisonCard = ({data} : any) => {
+  const {
+    Heading,
+    HeadingImg, 
+    SubHeading, 
+    SubHeadingImg,
+    SubHeading2,
+    SubHeadingImg2,
+  } = data
   return (
     <CardLayout >
       <Box>
         <Box sx={{ display: "flex", justifyContent: "center" }} >
-          <ComparisionHeader image={Team} heading={"Team"} />
+          <ComparisionHeader image={HeadingImg} heading={Heading} />
         </Box>
 
         <Divider sx={{
@@ -35,12 +43,12 @@ const ComparisonCard = () => {
 
           <Box sx={{ width: "80%", display: "flex", justifyContent: "space-between" }}>
             <Stack sx={{gap:"10px"}}>
-              <ComparisionHeader size="sm" image={Direct} heading='Directs' />
+              <ComparisionHeader size="sm" image={SubHeadingImg} heading={SubHeading} />
               <ComparsionStatus />
               <ComparsionStatus />
             </Stack>
             <Stack sx={{gap:"10px"}}>
-              <ComparisionHeader size="sm" image={Direct} heading='Donwline' />
+              <ComparisionHeader size="sm" image={SubHeadingImg2} heading={SubHeading2} />
               <ComparsionStatus />
               <ComparsionStatus />
             </Stack>
