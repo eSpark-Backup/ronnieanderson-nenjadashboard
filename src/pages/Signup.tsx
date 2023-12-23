@@ -1,7 +1,7 @@
 import { Box, Checkbox, FormControlLabel, SelectChangeEvent, Stack, Typography } from '@mui/material';
 import { CustomButton, CustomInput, CustomPhone, CustomSelector } from '../components';
 import { SigupData } from '../constants';
-import React, { ChangeEvent, ReactNode, useState } from 'react';
+import React, { ChangeEvent, ReactNode, useEffect } from 'react';
 import { CountryData } from 'react-phone-input-2';
 import { useFormik } from 'formik';
 import { signUpSchema } from '../schemas';
@@ -10,19 +10,8 @@ import { logo } from '../assets';
 
 
 const SignUp = () => {
-  const [userData, setUserData] = useState<IUserData>({
-    sponsorName: '',
-    username: '',
-    firstName: '',
-    lastName: '',
-    country: '',
-    phone: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
 
-  const { values, errors, handleBlur, handleChange, handleSubmit, touched } = useFormik({
+  const { values, setValues, errors, handleBlur, handleChange, handleSubmit, touched } = useFormik({
     initialValues: {
       sponsorName: '',
       username: '',
@@ -36,24 +25,22 @@ const SignUp = () => {
     },
     validationSchema: signUpSchema,
     onSubmit: (values) => {
-      console.log(values);
+      console.log(values, "values");
     }
   });
 
   const HandlePhoneChange = (value: string, country: CountryData, event: ChangeEvent<HTMLInputElement>, formattedValue: string) => {
-    setUserData((prevUserData) => ({
-      ...prevUserData,
-      phone: value,
-    }));
+    setValues({ ...values, phone: value });
   };
 
   const handleCountryChange = (event: SelectChangeEvent<any>, child: ReactNode, name: string) => {
     const value = event.target.value as string;
-    setUserData((prevUserData) => ({
-      ...prevUserData,
-      [name]: value,
-    }));
+    setValues({ ...values, [name]: value });
   };
+
+  useEffect(() => {
+    console.log(values, "userData");
+  }, [values])
 
   return (
     <Stack width="100%" sx={{ my: 10 }} direction="row" alignItems="center" justifyContent="center">
@@ -91,7 +78,8 @@ const SignUp = () => {
               <FormControlLabel control={<Checkbox defaultChecked />} label="I have read and accepted the terms & conditions of Nenja (click here to read)" />
             </Stack>
             <Stack direction={"column"} gap={2} width="100%" mt={2}>
-              <CustomButton type color='secondary' sx={{ height: "50px" }}>Sign up</CustomButton>
+              <CustomButton type={"submit"} color='secondary' sx={{ height: "50px" }}>Sign up</CustomButton>
+              <button type={"submit"} color='secondary' >Sign up</button>
               <Box>
                 <Typography mb={1} textAlign="center">Already have an account?</Typography>
                 <CustomButton sx={{ height: "50px" }}>Sign in</CustomButton>
