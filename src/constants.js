@@ -1,12 +1,4 @@
-import icon from './assets/Available Balance.png'
-import Team from "./assets/team.png"
-import Direct from "./assets/Directs.png"
-import Downline from "./assets/Downline.png"
-import ActiveHead from "./assets/Active-heading.png"
-import Active from "./assets/Active.png"
-import Business from "./assets/Business.png"
-import Inactive from "./assets/Inactive.png"
-import Settled from "./assets/Settled.png"
+import { icon, Team, Direct, Downline, ActiveHead, Active, Business, Inactive, Settled } from "./assets"
 
 
 

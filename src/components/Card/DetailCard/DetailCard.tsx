@@ -2,11 +2,7 @@ import CardLayout from '../CardLayout/CardLayout'
 import { Grid, Typography, Box, useMediaQuery, Stack } from '@mui/material'
 import { Theme as MuiTheme } from "@mui/material/styles";
 import StatusCard from '../StatusCard/StatusCard'
-import diamond from "../../../assets/RANK ICONS_Final_Emerald.png"
-import diamond2 from "../../../assets/Mask Group 4.png"
-import totalEarning from "../../../assets/Total Earnings.png"
-import DailyProfit from "../../../assets/Group 2214.png"
-import AvailableBalance from "../../../assets/Available Balance.png"
+import { DailyProfit, diamond, diamond2, totalEarning, AvailableBalance } from '../../../assets';
 
 const DetailCard = () => {
     const isSm = useMediaQuery((theme: MuiTheme) => theme.breakpoints.up("sm"));
@@ -37,7 +33,7 @@ const DetailCard = () => {
         },
         {
             icon:
-                <Stack justifyContent="center" alignItems="center" sx={{ width: "40px", height: "40px", borderRadius: "50%", background: `radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(#8DC63F ${radialPerc}%, #E2E2E2 0)` }}>
+                <Stack justifyContent="center" alignItems="center" sx={{ width: "42px", height: "42px", borderRadius: "50%", background: `radial-gradient(closest-side, white 79%, transparent 80% 100%), conic-gradient(#8DC63F ${radialPerc}%, #E2E2E2 0)` }}>
                     <Stack justifyContent="center" alignItems="center">
                         <Typography lineHeight="8px" fontSize="12px" fontWeight={600}>15</Typography>
                         <Typography fontSize="8px">Days</Typography>

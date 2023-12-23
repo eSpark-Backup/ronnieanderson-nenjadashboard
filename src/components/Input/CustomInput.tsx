@@ -1,7 +1,6 @@
 import { ReactNode, useState, ChangeEventHandler, FocusEventHandler } from "react"
 import { Box, IconButton, InputAdornment, TextField, Typography } from "@mui/material"
-import eye from "../../assets/XMLID_625_.png"
-import closeEye from "../../assets/eye.png"
+import { closeEye, eye } from "../../assets"
 
 interface IProps {
   required?: boolean

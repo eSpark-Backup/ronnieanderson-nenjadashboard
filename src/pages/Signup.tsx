@@ -1,11 +1,11 @@
 import { Box, Checkbox, FormControlLabel, SelectChangeEvent, Stack, Typography } from '@mui/material';
 import { CustomButton, CustomInput, CustomPhone, CustomSelector } from '../components';
-import logoImage from "../assets/Dashboard_logo.png";
 import { SigupData } from '../constants';
 import React, { ChangeEvent, ReactNode, useState } from 'react';
 import { CountryData } from 'react-phone-input-2';
 import { useFormik } from 'formik';
 import { signUpSchema } from '../schemas';
+import { logo } from '../assets';
 
 interface UserData {
   sponsorName: string;
@@ -70,7 +70,7 @@ const SignUp = () => {
       <Box sx={{ width: { xs: "100%", md: "620px" }, border: { xs: "0px", md: "1px solid #1D3B6A" }, borderRadius: "20px", }}>
         <Stack direction="column" alignItems="center" justifyContent="center" sx={{ p: { xs: "30px", md: "78px" } }}>
           <form style={{ display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }} onSubmit={handleSubmit}>
-            <img src={logoImage} width="175px" height="43px" alt="logo" />
+            <img src={logo} width="175px" height="43px" alt="logo" />
             <Typography sx={{ color: "#1D3B6A", fontSize: "30px", fontWeight: 600, my: 1 }}>Sign up</Typography>
             <Stack direction={"column"} gap={3} sx={{ width: "100%" }}>
               {SigupData?.map((eachInput, index) => (
@@ -101,7 +101,7 @@ const SignUp = () => {
               <FormControlLabel control={<Checkbox defaultChecked />} label="I have read and accepted the terms & conditions of Nenja (click here to read)" />
             </Stack>
             <Stack direction={"column"} gap={2} width="100%" mt={2}>
-            <CustomButton type color='secondary' sx={{ height: "50px" }}>Sign up</CustomButton>
+              <CustomButton type color='secondary' sx={{ height: "50px" }}>Sign up</CustomButton>
               <Box>
                 <Typography mb={1} textAlign="center">Already have an account?</Typography>
                 <CustomButton sx={{ height: "50px" }}>Sign in</CustomButton>

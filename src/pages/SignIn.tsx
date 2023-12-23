@@ -1,10 +1,10 @@
 import { Box, Checkbox, FormControlLabel, FormGroup, Stack, Typography } from '@mui/material';
 import { CustomButton, CustomInput } from '../components';
-import logoImage from "../assets/Dashboard_logo.png";
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import { useFormik } from 'formik';
 import { signInSchema } from '../schemas';
+import { logo } from '../assets';
 
 
 const SignIn: React.FC = () => {
@@ -25,7 +25,7 @@ const SignIn: React.FC = () => {
       <Box sx={{ width: { xs: "100%", md: "660px" }, border: { xs: "0px", md: "1px solid #1D3B6A" }, borderRadius: "20px" }}>
         <Stack direction="column" alignItems="center" justifyContent="center" sx={{ p: { xs: "30px", md: "78px" } }}>
           <form style={{ display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }} onSubmit={handleSubmit}>
-            <img src={logoImage} width="175px" height="43px" alt="logo" />
+            <img src={logo} width="175px" height="43px" alt="logo" />
             <Typography sx={{ fontSize: "30px", fontWeight: 600, mt: 1 }}>Sign in</Typography>
             <Typography sx={{ fontSize: "20px", fontWeight: 300, mb: 1 }}>to continue to Nenja</Typography>
 
