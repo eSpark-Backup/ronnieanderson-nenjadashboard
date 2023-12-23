@@ -1,23 +1,10 @@
-import { ReactNode, useState, ChangeEventHandler, FocusEventHandler } from "react"
+import { useState } from "react"
 import { Box, IconButton, InputAdornment, TextField, Typography } from "@mui/material"
 import { closeEye, eye } from "../../assets"
 
-interface IProps {
-  required?: boolean
-  label?: string
-  placeholder: string,
-  type: string
-  sx?: any
-  startIcon?: ReactNode,
-  onChange: ChangeEventHandler<HTMLInputElement>,
-  onBlur?: FocusEventHandler<HTMLInputElement>,
-  name: string,
-  value?: string,
-  error?: boolean,
-  helperText?: string
-}
 
-const CustomInput = ({ startIcon, required, label, placeholder, type, sx, onChange, name, onBlur, value, error, helperText }: IProps) => {
+
+const CustomInput = ({ startIcon, required, label, placeholder, type, sx, onChange, name, onBlur, value, error, helperText }: ICustomInput) => {
   const [showPassword, setShowPassword] = useState(false)
   return (
     <Box sx={{ width: "100%" }}>

@@ -1,16 +1,9 @@
-import { Box, MenuItem, Select, Typography, SelectChangeEvent  } from '@mui/material';
-import { ReactNode} from 'react';
+import { Box, MenuItem, Select, Typography, SelectChangeEvent } from '@mui/material';
+import { ReactNode } from 'react';
 
-interface IProps {
-    label: string;
-    placeholder: string;
-    options: any;
-    required?: boolean;
-    name: string; // Add the 'name' attribute to the interface
-    onChange: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
-}
 
-const CustomSelector = ({ label, placeholder, options, required, name, onChange }: IProps) => {
+
+const CustomSelector = ({ label, placeholder, options, required, name, onChange }: ICustomSelector) => {
     const handleSelectChange = (event: SelectChangeEvent<any>, child: ReactNode) => {
         // Call the parent's onChange handler with the 'name' attribute
         onChange(event, child, name);

@@ -1,14 +1,10 @@
 import { Box, Typography } from '@mui/material';
-import { ChangeEvent, ReactNode } from 'react';
-import PhoneInput, { CountryData } from 'react-phone-input-2';
+import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/material.css';
 
-interface IProps {
-    onChange: any
-    name: string;
-}
 
-const CustomPhone = ({ onChange, name }: IProps) => {
+
+const CustomPhone = ({ onChange, name }: ICustomPhone) => {
     return (
         <Box>
             <Typography textAlign="left" sx={{ marginBottom: "5px" }}>{"Phone Number"}</Typography>
@@ -16,7 +12,7 @@ const CustomPhone = ({ onChange, name }: IProps) => {
                 country={'in'}
                 placeholder="Enter phone number"
                 // inputProps={{name:name}}
-                inputProps={{name:"phone"}}
+                inputProps={{ name: "phone" }}
                 onChange={onChange}
             />
         </Box>

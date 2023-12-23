@@ -24,6 +24,7 @@ export const Sidebar = (props: ISidebar) => {
         if (open) {
             onClose?.();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [router.pathname]);
 
     const items = () => {

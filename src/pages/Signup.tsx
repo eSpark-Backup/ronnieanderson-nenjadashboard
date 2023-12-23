@@ -7,20 +7,10 @@ import { useFormik } from 'formik';
 import { signUpSchema } from '../schemas';
 import { logo } from '../assets';
 
-interface UserData {
-  sponsorName: string;
-  username: string;
-  firstName: string;
-  lastName: string;
-  country: string;
-  phone: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-}
+
 
 const SignUp = () => {
-  const [userData, setUserData] = useState<UserData>({
+  const [userData, setUserData] = useState<IUserData>({
     sponsorName: '',
     username: '',
     firstName: '',
@@ -82,9 +72,9 @@ const SignUp = () => {
                       :
                       <>
                         <CustomInput
-                          error={!!(errors[eachInput?.name as keyof UserData] && touched[eachInput?.name as keyof UserData])}
-                          helperText={errors[eachInput?.name as keyof UserData]}
-                          value={values[eachInput?.name as keyof UserData]}
+                          error={!!(errors[eachInput?.name as keyof IUserData] && touched[eachInput?.name as keyof IUserData])}
+                          helperText={errors[eachInput?.name as keyof IUserData]}
+                          value={values[eachInput?.name as keyof IUserData]}
                           onBlur={handleBlur}
                           onChange={handleChange}
                           name={eachInput?.name}
