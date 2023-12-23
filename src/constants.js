@@ -1,5 +1,24 @@
-import { icon, Team, Direct, Downline, ActiveHead, Active, Business, Inactive, Settled } from "./assets"
-
+import {
+  icon,
+  Team,
+  Direct,
+  Downline,
+  ActiveHead,
+  Active,
+  Business,
+  Inactive,
+  Settled,
+  DashboardIcon,
+  ProfileIcon,
+  PackageIcon,
+  TeamIcon,
+  IncomeIcon,
+  LedgerIcon,
+  PayoutIcon,
+  MarketingIcon,
+  SupportIcon,
+  LogoutIcon
+} from "./assets"
 
 
 export const SigupData = [
@@ -74,9 +93,17 @@ export const SigupData = [
 
 export const sidebarRoutes = [
   {
+    href: `/dashboard`,
+    icon: DashboardIcon,
+    activeIcon: DashboardIcon,
+    title: "Dashboard",
+    childs: null,
+    type: "link",
+  },
+  {
     href: `/profile`,
-    icon: icon,
-    activeIcon: icon,
+    icon: ProfileIcon,
+    activeIcon: ProfileIcon,
     title: "Profile",
     childs: [
       {
@@ -95,16 +122,16 @@ export const sidebarRoutes = [
   },
   {
     href: `/package`,
-    icon: icon,
-    activeIcon: icon,
+    icon: PackageIcon,
+    activeIcon: PackageIcon,
     title: "Package",
     childs: null,
     type: "link",
   },
   {
     href: `/team`,
-    icon: icon,
-    activeIcon: icon,
+    icon: TeamIcon,
+    activeIcon: TeamIcon,
     title: "Team",
     childs: [
       {
@@ -119,8 +146,8 @@ export const sidebarRoutes = [
   },
   {
     href: `/income`,
-    icon: icon,
-    activeIcon: icon,
+    icon: IncomeIcon,
+    activeIcon: IncomeIcon,
     title: "Income",
     childs: [
       {
@@ -139,41 +166,41 @@ export const sidebarRoutes = [
   },
   {
     href: `/ledger`,
-    icon: icon,
-    activeIcon: icon,
+    icon: LedgerIcon,
+    activeIcon: LedgerIcon,
     title: "Ledger",
     childs: null,
     type: "link",
   },
   {
     href: `/payout`,
-    icon: icon,
-    activeIcon: icon,
+    icon: PayoutIcon,
+    activeIcon: PayoutIcon,
     title: "Payout",
     childs: null,
     type: "link",
   },
   {
     href: `/marketing-material`,
-    icon: icon,
-    activeIcon: icon,
+    icon: MarketingIcon,
+    activeIcon: MarketingIcon,
     title: "Marketing Material",
     childs: null,
     type: "link",
   },
   {
     href: `/support`,
-    icon: icon,
-    activeIcon: icon,
+    icon: SupportIcon,
+    activeIcon: SupportIcon,
     title: "Support",
     childs: null,
     type: "link",
   },
   {
     href: `/sign-in`,
-    icon: icon,
-    activeIcon: icon,
-    title: "Log Out",
+    icon: LogoutIcon,
+    activeIcon: LogoutIcon,
+    title: "logout",
     childs: null,
     type: "logout",
   },

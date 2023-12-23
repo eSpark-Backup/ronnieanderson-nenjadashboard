@@ -7,8 +7,6 @@ import { useFormik } from 'formik';
 import { signUpSchema } from '../schemas';
 import { logo } from '../assets';
 
-
-
 const SignUp = () => {
 
   const { values, setValues, errors, handleBlur, handleChange, handleSubmit, touched } = useFormik({
