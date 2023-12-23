@@ -1,5 +1,4 @@
 import {
-  icon,
   Team,
   Direct,
   Downline,
