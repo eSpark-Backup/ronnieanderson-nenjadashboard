@@ -79,7 +79,6 @@ const SignUp = () => {
             </Stack>
             <Stack direction={"column"} gap={2} width="100%" mt={2}>
               <CustomButton type={"submit"} color='secondary' sx={{ height: "50px" }}>Sign up</CustomButton>
-              <button type={"submit"} color='secondary' >Sign up</button>
               <Box>
                 <Typography mb={1} textAlign="center">Already have an account?</Typography>
                 <CustomButton sx={{ height: "50px" }}>Sign in</CustomButton>
