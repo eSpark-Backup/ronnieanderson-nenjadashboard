@@ -19,6 +19,7 @@ export const getCountryFlag = (countryName: string) => {
 }
 
 export const getRankImage = (rank: string) => {
-    return rankingImages[rank]
+    const rankFormatted = rank && rank.toLowerCase().replaceAll(" ", "-")
+    return rankingImages[rankFormatted]
 }
 

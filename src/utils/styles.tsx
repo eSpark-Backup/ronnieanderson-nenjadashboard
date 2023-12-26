@@ -33,7 +33,7 @@ const packageStyle = makeStyles({
         padding: "30px"
     },
     packageSelect: {
-        minWidth: "300px",
+        minWidth: "200px",
         backgroundColor: "#FFF",
         borderRadius: "10px !important",
         "& div": { color: "#1D3B6A", fontSize: "27px", fontWeight: 600, display: "flex", justifyContent: "flex-start", alignItems: "center", padding: "10px" },
