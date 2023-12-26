@@ -203,9 +203,23 @@ const payOutScreenStyles = makeStyles({
 
 });
 
+const dateRangePickerStyles = makeStyles({
+    container: {
+        height: "100%",
+        padding: "7px 10px",
+        border: "1px solid #707070",
+        borderRadius: "5px"
+    },
+    datepicker: {
+        width: "100%",
+        "& input": { padding: "0px" }
+    }
+});
+
 export const styles = {
     tableStyle,
     packageStyle,
-    payOutScreenStyles
+    payOutScreenStyles,
+    dateRangePickerStyles,
 }
 
