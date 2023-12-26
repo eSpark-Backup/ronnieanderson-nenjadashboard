@@ -232,6 +232,29 @@ export const ActiveInacitveData = {
   SubHeadingImg2: Inactive,
 }
 
+export const payOutDetailsTypeOne = [
+  {
+    buttonText: "Withdrawal Amount",
+    inputText: "$500.00"
+  },
+  {
+    buttonText: "USDT Address",
+    inputText: "Enter USDT - TRC 20 Adress"
+  },
+]
+
+export const payOutDetailsTypeTwo = [
+  {
+    buttonText: "Email Code",
+    inputText: "781236478",
+    hasButton: true,
+    button2Text: "Send Code"
+  }, {
+    buttonText: "2FA Code",
+    inputText: "sd78542sd2265",
+    hasIcon: true
+  }
+]
 export const packageData: IPackage[] = [
   {
     id: "1",
