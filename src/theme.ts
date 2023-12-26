@@ -125,7 +125,7 @@ export const theme = createTheme({
                 },
                 notchedOutline: {
                     borderColor: "#E9EAEC",
-                    borderRadius: "10px",
+                    // borderRadius: "10px",
                 },
             },
         },
@@ -228,7 +228,7 @@ export const theme = createTheme({
         },
     },
     shape: {
-        borderRadius: 8,
+        // borderRadius: 8,
     },
     shadows: [
         "none",
