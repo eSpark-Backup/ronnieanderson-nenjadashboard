@@ -124,4 +124,9 @@ declare global {
         country: string,
         amount: string,
     }
+    interface IIncomeTeamBonus extends IBase {
+        date: string,
+        settledBusiness: string,
+        amount: string,
+    }
 }
