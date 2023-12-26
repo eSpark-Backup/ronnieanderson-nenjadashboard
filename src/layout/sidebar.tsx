@@ -91,6 +91,7 @@ export const Sidebar = (props: ISidebar) => {
                         boxShadow: "none",
                         borderRight: "1px solid #E9EAEC",
                         transition: "0.3s",
+                        "::-webkit-scrollbar": { width: "0" }
                     },
                 }}
                 variant={"permanent"}

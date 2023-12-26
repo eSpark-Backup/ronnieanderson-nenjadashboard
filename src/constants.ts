@@ -231,3 +231,186 @@ export const ActiveInacitveData = {
   SubHeading2: "Inactive",
   SubHeadingImg2: Inactive,
 }
+
+export const payOutDetailsTypeOne = [
+  {
+    buttonText: "Withdrawal Amount",
+    inputText: "$500.00"
+  },
+  {
+    buttonText: "USDT Address",
+    inputText: "Enter USDT - TRC 20 Adress"
+  },
+]
+
+export const payOutDetailsTypeTwo = [
+  {
+    buttonText: "Email Code",
+    inputText: "781236478",
+    hasButton: true,
+    button2Text: "Send Code"
+  }, {
+    buttonText: "2FA Code",
+    inputText: "sd78542sd2265",
+    hasIcon: true
+  }
+]
+export const packageData: IPackage[] = [
+  {
+    id: "1",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "2",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "3",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "4",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "5",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "6",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "7",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "8",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+];
+
+export const packageOptions = [
+  { value: "$500", text: "$500" },
+  { value: "$800", text: "$800" },
+  { value: "$1000", text: "$1000" },
+]
+
+export const directTeamData: IDirectTeam[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Diamond"
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Double Diamond"
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Philippines",
+    position: "Left",
+    rank: "Ruby"
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Poland",
+    position: "Right",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Double Diamond"
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Philippines",
+    position: "Left",
+    rank: "Sapphire"
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Poland",
+    position: "Right",
+    rank: "Royal Crown Diamond"
+  },
+  {
+    id: "9",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "10",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Ruby"
+  },
+]

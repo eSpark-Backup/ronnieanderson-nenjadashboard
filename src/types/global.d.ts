@@ -7,6 +7,27 @@ declare global {
         | React.ComponentClass<unknown>
         | null;
 
+    interface IDynamicTable<T> {
+        title: string;
+        rightNode?: ReactNode;
+        data: T[];
+        columns: IColumn[];
+        isLoading: boolean;
+        handlePageChange?: (newPage: number) => void;
+        total?: number;
+    }
+
+    interface IColumn {
+        name: string;
+        key: string;
+        component?: (any: any) => ReactNode;
+        width?: string;
+    }
+
+    interface IBase extends Record<string, unknown> {
+        id: string | number;
+    }
+
     interface ISidebar {
         open: boolean;
         onClose?: () => void;
@@ -72,11 +93,29 @@ declare global {
         name: string;
     }
     interface ICustomSelector {
-        label: string;
-        placeholder: string;
+        label?: string;
+        placeholder?: string;
         options: any;
         required?: boolean;
-        name: string; // Add the 'name' attribute to the interface
+        name?: string; // Add the 'name' attribute to the interface
         onChange: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
+        className?: string
+        sx?: any
+    }
+
+    interface IPackage extends IBase {
+        date: string,
+        package: string,
+        status: boolean,
+    }
+
+    interface IDirectTeam extends IBase {
+        date: string,
+        userName: string,
+        email: string,
+        activationDate: string,
+        country: string,
+        position: string,
+        rank: string
     }
 }
