@@ -311,3 +311,106 @@ export const packageOptions = [
   { value: "$800", text: "$800" },
   { value: "$1000", text: "$1000" },
 ]
+
+export const directTeamData: IDirectTeam[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Diamond"
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Double Diamond"
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Philippines",
+    position: "Left",
+    rank: "Ruby"
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Poland",
+    position: "Right",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Double Diamond"
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Philippines",
+    position: "Left",
+    rank: "Sapphire"
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Poland",
+    position: "Right",
+    rank: "Royal Crown Diamond"
+  },
+  {
+    id: "9",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "10",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Ruby"
+  },
+]

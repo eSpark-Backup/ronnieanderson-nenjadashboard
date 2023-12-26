@@ -85,7 +85,7 @@ const DynamicTable = <T extends IBase>({
 
     return (
         <CardLayout>
-            <Stack p={2}>
+            <Stack gap={2} direction={{ xs: "column", sm: "row" }} alignItems="center" justifyContent="space-between" p={2}>
                 <Typography variant="h6">{title}</Typography>
                 {rightNode}
             </Stack>
@@ -140,7 +140,7 @@ const DynamicTable = <T extends IBase>({
                     )}
                 </TableContainer>
             }
-            <Stack p={2} alignItems="flex-end">
+            <Stack mt={0.5} p={{ xs: 0, sm: 2 }} alignItems="flex-end">
                 <Pagination onChange={handlePageChange ? (_, page) => handlePageChange(page) : () => { }} count={(total || 1) / 10} color="primary" />
             </Stack>
         </CardLayout>

@@ -8,6 +8,7 @@ import MultiplierCard from "./Card/MultiplierCard/MultiplierCard"
 import DetailCard from "./Card/DetailCard/DetailCard"
 import LimitCard from "./Card/LimitCard/LimitCard";
 import DynamicTable from "./Table"
+import DateRangePicker from "./Date-range-picker"
 
 export {
     CustomInput,
@@ -20,4 +21,5 @@ export {
     DetailCard,
     LimitCard,
     DynamicTable as Table,
+    DateRangePicker,
 }
