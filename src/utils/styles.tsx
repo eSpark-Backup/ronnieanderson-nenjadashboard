@@ -50,8 +50,162 @@ const packageStyle = makeStyles({
     },
 })
 
+
+const payOutScreenStyles = makeStyles({
+    root: {
+        background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+        border: 0,
+        borderRadius: 3,
+        boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+        color: 'white',
+        height: 48,
+        padding: '0 30px',
+    },
+
+    balanceCardContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: "center",
+        flexDirection: "column",
+        gap: "50px"
+    },
+
+    balanceCard: {
+        display: 'flex',
+        alignItems: 'center',
+        padding: '20px',
+        background: '#fff',
+        borderRadius: '10px',
+        boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.3)',
+        marginBottom: '20px',
+        width: '200px',
+    },
+
+    balanceCardHeadingBox: {
+        marginLeft: '10px',
+    },
+    balacneCardTitle: {
+        fontSize: '14px',
+    },
+
+    balacneCardValue: {
+        fontSize: '20px !important',
+        fontWeight: 'bolder !important',
+        color: "#1D3B6A !important",
+
+    },
+    balanceInputsContainer: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        gap: "30px"
+    },
+    inputGroupButton: {
+        backgroundColor: "#7C7F84",
+        borderRadius: "5px 0px 0px 5px"
+    },
+    inputGroupTextfield1: {
+        borderTopLeftRadius: "0px !important",
+        borderBottomLeftRadius: "0px !important",
+        borderTopRightRadius: "none",
+        borderBottomRightRadius: "none",
+        width: "50%",
+        textAlign: "right",
+        height: "50px",
+        border: "1px solid #D7D7D7",
+        color: "#000000 !important",
+        fontWeight: "bolder !important",
+        fontSize: "20px !important"
+    },
+    inputGroupTextfield2: {
+        borderTopLeftRadius: '0px !important',
+        borderBottomLeftRadius: '0px !important',
+        borderTopRightRadius: 'none',
+        borderBottomRightRadius: 'none',
+        width: '51%',
+        height: "50px",
+        border: "1px solid #D7D7D7",
+        color: "#000000 !important",
+        fontWeight: "bolder !important",
+        fontSize: "20px !important"
+    },
+
+    inputGroupTypeOne: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "row",
+    },
+
+    inputGroupTypeTwo: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "flex-end",
+    },
+    inputGroupTypeTwoChild: {
+        width: "66%",
+        marginRight: "8px",
+        display: "flex",
+        flexDirection: "row"
+    },
+    balanceCardFooter: {
+        width: "70%",
+        display: "flex",
+        justifyContent: "flex-end"
+    },
+    icon: {
+        marginLeft: "5px",
+        fontSize: "16px !important",
+        color: "#7C7F84"
+    },
+    '@media (max-width:1200px)': {
+        inputGroupTypeTwoChild: {
+            width: "100%",
+        },
+        inputGroupTypeTwo: {
+            justifyContent: "center"
+        },
+        balanceCardFooter: {
+            justifyContent: "center"
+        }
+    },
+    '@media (max-width: 700px)': {
+        inputGroupTypeOne: {
+            flexDirection: "column",
+            rowGap: "20px !important"
+        },
+        inputGroupTextfield1: {
+            width: "100%",
+            fontSize: "14px !important"
+        },
+        inputGroupTypeTwo: {
+            justifyContent: "flex-start",
+            rowGap: "20px !important"
+        },
+        inputGroupTypeTwoChild: {
+            justifyContent: "flex-start",
+            flexDirection: "column",
+            width: "100%",
+            rowGap: "20px !important"
+        },
+        inputGroupTextfield2: {
+            width: "100%",
+            fontSize: "14px !important"
+        },
+        balanceCardFooter: {
+            width: "100%",
+            justifyContent: "flex-start"
+        }
+    }
+
+});
+
 export const styles = {
     tableStyle,
     packageStyle,
+    payOutScreenStyles
 }
 
