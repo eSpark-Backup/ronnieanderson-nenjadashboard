@@ -231,3 +231,60 @@ export const ActiveInacitveData = {
   SubHeading2: "Inactive",
   SubHeadingImg2: Inactive,
 }
+
+export const packageData: IPackage[] = [
+  {
+    id: "1",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "2",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "3",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "4",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "5",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "6",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "7",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "8",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+];
+
+export const packageOptions = [
+  { value: "$500", text: "$500" },
+  { value: "$800", text: "$800" },
+  { value: "$1000", text: "$1000" },
+]

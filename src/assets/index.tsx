@@ -29,6 +29,7 @@ import PayoutIcon from "./PayoutIcon.png"
 import MarketingIcon from "./MarketingIcon.png"
 import SupportIcon from "./SupportIcon.png"
 import LogoutIcon from "./LogoutIcon.png"
+import NoData from "./no-data.svg"
 
 
 
@@ -62,5 +63,6 @@ export {
     PayoutIcon,
     MarketingIcon,
     SupportIcon,
-    LogoutIcon
+    LogoutIcon,
+    NoData,
 }

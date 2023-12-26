@@ -30,4 +30,8 @@ code {
   box-shadow: none !important;
 }
 
+.MuiPaginationItem-ellipsis {
+  border: 0 !important
+}
+
 /* // */
