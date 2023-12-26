@@ -74,7 +74,7 @@ const DynamicTable = <T extends IBase>({
         ) : column.key[0] === "rank" ? (
             <>
                 <Stack direction="row" alignItems="center" justifyContent="flex-start" gap={2}>
-                    {cell && getRankImage(cell) && <img src={getRankImage(cell)} width={40} height={40} alt="flag" />}
+                    {cell && getRankImage(cell) && <img style={{ objectFit: "none" }} src={getRankImage(cell)} width={40} height={40} alt="flag" />}
                     <Typography variant="body2">{cell}</Typography>
                 </Stack>
             </>

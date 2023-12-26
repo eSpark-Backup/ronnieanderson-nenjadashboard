@@ -1,8 +1,7 @@
 import { Box } from '@mui/system';
 import CardLayout from '../../components/Card/CardLayout/CardLayout'
-import { makeStyles } from '@mui/styles';
 import { AvailableBalance } from '../../assets';
-import { Button, OutlinedInput, Stack, TextField, Typography } from '@mui/material';
+import {  OutlinedInput, Typography } from '@mui/material';
 import { CustomButton } from '../../components';
 import { payOutDetailsTypeOne, payOutDetailsTypeTwo } from '../../constants';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
@@ -18,7 +17,7 @@ const Payout = () => {
   return (
     <div>
       <CardLayout sx={{ px: { xs: 1, md: 5 },minHeight:"80vh" }}>
-        <Typography variant="h6">
+        <Typography mt={2} variant="h6">
           Payout
         </Typography>
 
