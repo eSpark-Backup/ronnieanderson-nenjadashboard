@@ -1,8 +1,19 @@
-import React from 'react'
+import { Box } from '@mui/material';
+import { Table } from '../../../components'
+import { columns } from '../../../columns/income-team-bonus'
+import { incomeTeamBonusData } from '../../../constants';
 
 const TeamBonus = () => {
   return (
-    <div>TeamBonus</div>
+    <Box>
+      <Table
+        title="Matching"
+        data={incomeTeamBonusData}
+        columns={columns()}
+        isLoading={false}
+        total={40}
+      />
+    </Box>
   )
 }
 

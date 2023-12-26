@@ -3,15 +3,14 @@ import { DateRangePicker as MUIDateRangePicker } from "@mui/x-date-pickers-pro/D
 import { SingleInputDateRangeField } from "@mui/x-date-pickers-pro/SingleInputDateRangeField";
 import { Stack } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import { styles } from "../../utils/styles";
+import { calendar, filter } from "../../assets";
 
 export default function DateRangePicker() {
     const classes = styles.dateRangePickerStyles()
     return (
         <Stack direction="row" alignItems="center" justifyContent="center" className={classes.container}>
-            <CalendarMonthIcon color="primary" />
+            <img src={calendar} width={20} height={20} alt="calendar" />
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <MUIDateRangePicker
                     className={classes.datepicker}
@@ -22,7 +21,7 @@ export default function DateRangePicker() {
                     }}
                 />
             </LocalizationProvider>
-            <FilterAltIcon color="primary" />
+            <img src={filter} width={20} height={20} alt="filter" />
         </Stack>
     );
 }

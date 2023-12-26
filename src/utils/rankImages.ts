@@ -1,8 +1,17 @@
+import {
+    diamondRank,
+    doubleDiamond,
+    ruby,
+    sapphire25,
+    sapphire,
+    crownDiamond
+} from "../assets"
+
 export const rankingImages: any = {
-    "diamond": "http://flags.fmcdn.net/data/flags/normal/af.png",
-    "double-diamond": "http://flags.fmcdn.net/data/flags/normal/al.png",
-    "ruby": "http://flags.fmcdn.net/data/flags/normal/dz.png",
-    "sapphire-25": "http://flags.fmcdn.net/data/flags/normal/ad.png",
-    "sapphire": "http://flags.fmcdn.net/data/flags/normal/ao.png",
-    "royal-crown-diamond": "http://flags.fmcdn.net/data/flags/normal/ao.png",
+    "diamond": diamondRank,
+    "double-diamond": doubleDiamond,
+    "ruby": ruby,
+    "sapphire-25": sapphire25,
+    "sapphire": sapphire,
+    "royal-crown-diamond": crownDiamond,
 }
