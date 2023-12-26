@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export const theme = createTheme({
     breakpoints: {
@@ -124,27 +125,27 @@ export const theme = createTheme({
                     paddingLeft: "6px",
                 },
                 notchedOutline: {
-                    borderColor: "#E9EAEC",
-                    // borderRadius: "10px",
+                    border: "none",
+                    borderRadius: "10px",
                 },
             },
         },
         MuiTableHead: {
             styleOverrides: {
                 root: {
-                    backgroundColor: "#FAFAFA",
+                    backgroundColor: "#7C7F84",
                     ".MuiTableCell-root": {
-                        color: "#687588",
+                        color: "#FFFFFF",
                     },
                     borderBottom: "none",
                     "& .MuiTableCell-root": {
                         borderBottom: "none",
                         fontSize: "12px",
-                        fontWeight: 700,
+                        fontWeight: 400,
                         lineHeight: 1,
                         letterSpacing: 0.5,
                         textTransform: "initial",
-                        color: "#687588",
+                        color: "#FFFFFF",
                     },
                 },
             },
@@ -153,7 +154,6 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     "& .MuiTableCell-root": {
-                        borderBottom: "1px solid #f1f2f4",
                         color: "#111827",
                         fontSize: "12px",
                     },
@@ -168,7 +168,17 @@ export const theme = createTheme({
                     marginRight: "8px",
                 },
             },
+            defaultProps: {
+                IconComponent: KeyboardArrowDownIcon,
+            },
         },
+        MuiPaginationItem: {
+            styleOverrides: {
+                root: {
+                    border: "1px solid #1D3B6A",
+                }
+            }
+        }
     },
 
     palette: {
