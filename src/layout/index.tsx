@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Box, IconButton, Stack, useMediaQuery } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 import MenuIcon from '@mui/icons-material/Menu';
@@ -20,9 +20,16 @@ const LayoutBox = styled("div")(({ theme }: any) => ({
 
 const LoggedinLayout = () => {
     const theme = useTheme();
+    const {  pathname } = useLocation();
     const { breakpoints } = theme;
     const [isSidebarOpen, setSidebarOpen] = useState(true);
     const IsLgUp = useMediaQuery(breakpoints.up("lg"));
+
+    const getPrimaryBg = () => {
+        //insert the paths where blue color is required
+        const paths = ["/team/direct"]
+        return paths.includes(pathname)
+    }
 
     return (
         <>
@@ -43,6 +50,9 @@ const LoggedinLayout = () => {
                         <IconButton onClick={() => setSidebarOpen(!isSidebarOpen)} sx={{ position: "absolute", left: "10px", top: "10px" }}>
                             <MenuIcon />
                         </IconButton>}
+                    {getPrimaryBg() && <Box sx={{ backgroundColor: "#1D3B6A", position: "absolute", left: "0px", top: "0px", width: "100%", height: "300px", zIndex: -1 }}>
+                        {""}
+                    </Box>}
                     <Box sx={{
                         padding: "130px 40px 40px",
                         height: "100% !important",

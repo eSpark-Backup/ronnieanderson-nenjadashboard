@@ -3,16 +3,17 @@ import { ReactNode } from 'react';
 
 
 
-const CustomSelector = ({ label, placeholder, options, required, name, onChange }: ICustomSelector) => {
+const CustomSelector = ({ label, placeholder, options, required, name, onChange, className }: ICustomSelector) => {
     const handleSelectChange = (event: SelectChangeEvent<any>, child: ReactNode) => {
         // Call the parent's onChange handler with the 'name' attribute
-        onChange(event, child, name);
+        onChange(event, child, name || "");
     };
 
     return (
         <Box>
-            <Typography textAlign="left" sx={{ marginBottom: "5px" }}>{label}{required ? "*" : ""}</Typography>
+            {label && <Typography textAlign="left" sx={{ marginBottom: "5px" }}>{label}{required ? "*" : ""}</Typography>}
             <Select
+                className={className}
                 id="demo-simple-select"
                 placeholder={placeholder}
                 defaultValue={options[0]?.value}
