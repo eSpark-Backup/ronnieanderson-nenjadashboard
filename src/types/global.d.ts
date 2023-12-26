@@ -108,4 +108,14 @@ declare global {
         package: string,
         status: boolean,
     }
+
+    interface IDirectTeam extends IBase {
+        date: string,
+        userName: string,
+        email: string,
+        activationDate: string,
+        country: string,
+        position: string,
+        rank: string
+    }
 }
