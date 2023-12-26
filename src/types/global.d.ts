@@ -118,4 +118,10 @@ declare global {
         position: string,
         rank: string
     }
+    interface IIncomeReferral extends IBase {
+        date: string,
+        userName: string,
+        country: string,
+        amount: string,
+    }
 }

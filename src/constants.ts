@@ -414,3 +414,76 @@ export const directTeamData: IDirectTeam[] = [
     rank: "Ruby"
   },
 ]
+
+export const incomeReferralData: IIncomeReferral[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Germany",
+    amount: "$75,000.00"
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Norway",
+    amount: "$75,000.00"
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Philippines",
+    amount: "$75,000.00"
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Poland",
+    amount: "$75,000.00"
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Germany",
+    amount: "$75,000.00"
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Norway",
+    amount: "$75,000.00"
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Philippines",
+    amount: "$75,000.00"
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Poland",
+    amount: "$75,000.00"
+  },
+  {
+    id: "9",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Germany",
+    amount: "$75,000.00"
+  },
+  {
+    id: "10",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Norway",
+    amount: "$75,000.00"
+  },
+]
