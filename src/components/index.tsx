@@ -6,7 +6,8 @@ import Logo from "./logo"
 import ComparisonCard from "./Card/ComparisonCard/ComparisonCard"
 import MultiplierCard from "./Card/MultiplierCard/MultiplierCard"
 import DetailCard from "./Card/DetailCard/DetailCard"
-import LimitCard from "./Card/LimitCard/LimitCard"
+import LimitCard from "./Card/LimitCard/LimitCard";
+import DynamicTable from "./Table"
 
 export {
     CustomInput,
@@ -18,4 +19,5 @@ export {
     MultiplierCard,
     DetailCard,
     LimitCard,
+    DynamicTable as Table,
 }
