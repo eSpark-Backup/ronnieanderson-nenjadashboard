@@ -1,4 +1,5 @@
 import { makeStyles } from '@mui/styles';
+import { packageBg } from '../assets';
 
 const tableStyle = makeStyles({
     evenRow: {
@@ -28,9 +29,15 @@ const tableStyle = makeStyles({
 
 const packageStyle = makeStyles({
     packageCard: {
-        background: "#000",
+        background: `url(${packageBg})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "auto",
+        backgroundPosition: "center",
         borderRadius: "20px",
-        padding: "30px"
+        padding: "30px",
+        '@media (min-width: 1000px)': {
+            backgroundSize: '103%',
+          },
     },
     packageSelect: {
         minWidth: "200px",
