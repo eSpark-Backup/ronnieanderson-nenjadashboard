@@ -5,17 +5,16 @@ import { Stack } from "@mui/material";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import { styles } from "../../utils/styles";
 
 export default function DateRangePicker() {
+    const classes = styles.dateRangePickerStyles()
     return (
-        <Stack direction="row" alignItems="center" justifyContent="center" sx={{ height: "100%", padding: "7px 10px", border: "1px solid #707070", borderRadius: "5px" }}>
+        <Stack direction="row" alignItems="center" justifyContent="center" className={classes.container}>
             <CalendarMonthIcon color="primary" />
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <MUIDateRangePicker
-                    sx={{
-                        width: "100%",
-                        input: { padding: "0px" }
-                    }}
+                    className={classes.datepicker}
                     slots={{ field: SingleInputDateRangeField }}
                     format="DD/MM/YYYY"
                     onChange={(newValue: any) => {
