@@ -65,7 +65,7 @@ declare global {
 
       interface ICustomButton {
         children: ReactElement | string
-        sx?: any,
+        className?: string[];
         variant?: "contained" | "text" | "outlined",
         color?: "inherit" | "primary" | "secondary" | "success" | "error" | "info" | "warning" | undefined,
         onClick?: MouseEventHandler<HTMLButtonElement>,
@@ -78,9 +78,9 @@ declare global {
         label?: string
         placeholder: string,
         type: string
-        sx?: any
+        className?: string[];
         startIcon?: ReactNode,
-        onChange: ChangeEventHandler<HTMLInputElement>,
+        onChange?: ChangeEventHandler<HTMLInputElement>,
         onBlur?: FocusEventHandler<HTMLInputElement>,
         name: string,
         value?: string,
@@ -89,7 +89,7 @@ declare global {
       }
 
       interface ICustomPhone {
-        onChange: any
+        onChange?: any
         name: string;
     }
     interface ICustomSelector {
@@ -98,9 +98,8 @@ declare global {
         options: any;
         required?: boolean;
         name?: string; // Add the 'name' attribute to the interface
-        onChange: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
-        className?: string
-        sx?: any
+        onChange?: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
+        className?: string[];
     }
 
     interface IPackage extends IBase {

@@ -1,11 +1,13 @@
 import { Card } from '@mui/material';
 import React from 'react';
+import { styles } from '../../../utils/styles';
 
 
 
-const CardLayout: React.FC<{ children: React.ReactNode, sx?: any }> = ({ children, sx}) => {
+const CardLayout: React.FC<{ children: React.ReactNode, className?: string[] }> = ({ children, className }) => {
+  const classes = styles.cardStyles({})
   return (
-    <Card sx={{ py: 1, borderRadius:"15px",  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', ...sx  }}>
+    <Card className={className ? [classes.cardLayout, ...className].join(" ") : classes.cardLayout}>
       {children}
     </Card>
   );

@@ -110,10 +110,6 @@ export const sidebarRoutes = [
         href: "/profile/account",
       },
       {
-        title: "Password",
-        href: "/profile/password",
-      },
-      {
         title: "2FA",
         href: "/profile/2fa",
       },
@@ -133,6 +129,10 @@ export const sidebarRoutes = [
     activeIcon: TeamIcon,
     title: "Team",
     childs: [
+      {
+        title: "New",
+        href: "/team/new",
+      },
       {
         title: "Direct",
         href: "/team/direct",
@@ -548,5 +548,146 @@ export const incomeTeamBonusData: IIncomeTeamBonus[] = [
     date: "17/11/2023",
     settledBusiness: "10,000.00",
     amount: "$75,000.00"
+  },
+]
+
+
+export const accountSettingsData = [
+  {
+    label: "First Name",
+    type: "text",
+    required: false,
+    placeholder: "Philip",
+    name: "firstName"
+  },
+  {
+    label: "Last Name",
+    type: "text",
+    required: false,
+    placeholder: "John",
+    name: "lastName"
+  },
+  {
+    label: "Username",
+    type: "text",
+    required: false,
+    placeholder: "philipjohn2023",
+    name: "username"
+  },
+  {
+    label: "Phone Number",
+    type: "phone",
+    required: false,
+    placeholder: "9812345678",
+    name: "phone"
+  },
+  {
+    label: "Country",
+    type: "select",
+    options: [{ value: 10, text: "India" }, { value: 20, text: "Pakistan" }],
+    required: false,
+    placeholder: "India",
+    name: "country"
+  },
+  {
+    label: "Email Address",
+    type: "email",
+    required: false,
+    placeholder: "xyz@gmail.com",
+    name: "email"
+  },
+]
+
+export const accountSecurityData = [
+  {
+    label: "Old Password",
+    type: "password",
+    required: false,
+    placeholder: "•••••••••",
+    name: "oldPassword"
+  },
+  {
+    label: "New Password",
+    type: "password",
+    required: false,
+    placeholder: "•••••••••",
+    name: "newPassword"
+  },
+  {
+    label: "Confirm New Password",
+    type: "password",
+    required: false,
+    placeholder: "12345678910",
+    name: "confirmPassword"
+  },
+]
+
+export const newTeamData = [
+  {
+    label: "Referral ID",
+    type: "text",
+    required: true,
+    placeholder: "NENJA123456789",
+    name: "referralID"
+  },
+  {
+    hasButton:true
+  },
+  {
+    label: "First Name",
+    type: "text",
+    required: false,
+    placeholder: "Philip",
+    name: "firstName"
+  },
+  {
+    label: "Last Name",
+    type: "text",
+    required: false,
+    placeholder: "John",
+    name: "lastName"
+  },
+  {
+    label: "Username",
+    type: "text",
+    required: false,
+    placeholder: "philipjohn2023",
+    name: "username"
+  },
+  {
+    label: "Phone Number",
+    type: "phone",
+    required: false,
+    placeholder: "Enter your phone number",
+    name: "phone"
+  },
+  {
+    label: "Country",
+    type: "select",
+    options: [{ value: 10, text: "India" }, { value: 20, text: "Pakistan" }],
+    required: false,
+    placeholder: "India",
+    name: "country"
+  },
+  {
+    label: "Email Address",
+    type: "email",
+    required: false,
+    placeholder: "xyz@gmail.com",
+    name: "email"
+  },
+  {
+    label: "Password",
+    type: "password",
+    required: false,
+    placeholder: "Enter your password",
+    name: "password"
+  },
+  {
+    label: "Confirm Password",
+    type: "password",
+    required: false,
+    placeholder: "Enter your confirm password",
+    name: "confirmPassword"
   },
 ]

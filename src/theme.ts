@@ -12,6 +12,25 @@ export const theme = createTheme({
         },
     },
     components: {
+        MuiTabs: {
+            styleOverrides: {
+                indicator: {
+                    backgroundColor: '#51C9F4',
+                },
+            },
+        },
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    color: '#7C7F84',
+                    '&.Mui-selected': {
+                        color: '#1D3B6A',
+                        fontWeight: "bolder",
+
+                    },
+                },
+            },
+        },
         MuiTypography: {
             defaultProps: {
                 color: 'primary'
@@ -125,7 +144,7 @@ export const theme = createTheme({
                     paddingLeft: "6px",
                 },
                 notchedOutline: {
-                    border: "none",
+                    borderColor: "#E9EAEC",
                     borderRadius: "10px",
                 },
             },
@@ -273,7 +292,7 @@ export const theme = createTheme({
         },
         fontFamily: `"Montserrat", "sans-serif"`,
         // fontFamily: `"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-		// 	 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`,
+        // 	 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`,
         body1: {
             fontSize: "1rem",
             fontWeight: 400,

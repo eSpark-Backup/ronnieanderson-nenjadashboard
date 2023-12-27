@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 const ComparisionHeader = ({ image, heading, size }: {
   image?: string;
@@ -7,21 +7,16 @@ const ComparisionHeader = ({ image, heading, size }: {
 }) => {
   return (
     <>
-      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-        <Box sx={{ mr: 1 }}>
+      <Stack direction="row" alignItems="center">
+        <Box mr={1}>
           <img src={image} alt="logo" />
         </Box>
         <Box>
-          <Typography
-            sx={{
-              fontSize: size === 'sm' ? '15px' : '20px',
-              fontWeight: 600,
-            }}
-          >
+          <Typography fontSize={size === "sm" ? "15px" : "20px"} fontWeight={600}>
             {heading}
           </Typography>
         </Box>
-      </Box>
+      </Stack>
     </>
   );
 };
