@@ -203,9 +203,73 @@ const payOutScreenStyles = makeStyles({
 
 });
 
+export const profileMainStyles = makeStyles({
+    profileConatiner: {
+        padding: "20px 20px 20px 20px",
+    },
+    profileFooter: {
+        display: "flex",
+        marginTop: "50px",
+        justifyContent: "flex-end",
+        gap: "4px",
+        flexWrap: "wrap"
+    },
+    securityFooterParent: {
+        display: "flex"
+    },
+    securityFooterChild: {
+        display: "flex",
+        columnGap: "4px",
+        backgroundColor: "#F9F9F9",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        padding: "10px 0px 10px 0px",
+        gap: "3px",
+        borderRadius: "20px",
+        marginTop: "8px"
+    },
+    securityFooterImage: {
+        width: "90%"
+    },
+    securityHeading: {
+        fontSize: "25px !important",
+        color: "#1D3B6A !important",
+        fontWeight: "bold !important"
+    },
+    userName: {
+        fontSize: "30px !important",
+        fontWeight: "bolder !important",
+        color: "#1D3B6A !important"
+    },
+    userRank1: {
+        textAlign: "center",
+        color: "#1D3B6A !important",
+        fontWeight: "300 !important"
+    },
+    userRank2: {
+        textAlign: "center",
+        color: "#1D3B6A !important",
+        fontWeight: "bold !important",
+        fontSize: "30px !important"
+    },
+    '@media (max-width:550px)': {
+        profileFooter: {
+            justifyContent: "center"
+        },
+        securityFooterParent: {
+            justifyContent: "center"
+        },
+        profileConatiner: {
+            padding: "20px 0px 20px 0px",
+        }
+    },
+})
+
 export const styles = {
     tableStyle,
     packageStyle,
-    payOutScreenStyles
+    payOutScreenStyles,
+    profileMainStyles
 }
 

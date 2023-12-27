@@ -80,7 +80,7 @@ declare global {
         type: string
         sx?: any
         startIcon?: ReactNode,
-        onChange: ChangeEventHandler<HTMLInputElement>,
+        onChange?: ChangeEventHandler<HTMLInputElement>,
         onBlur?: FocusEventHandler<HTMLInputElement>,
         name: string,
         value?: string,
@@ -89,8 +89,9 @@ declare global {
       }
 
       interface ICustomPhone {
-        onChange: any
+        onChange?: any
         name: string;
+        sx?:any
     }
     interface ICustomSelector {
         label?: string;
@@ -98,7 +99,7 @@ declare global {
         options: any;
         required?: boolean;
         name?: string; // Add the 'name' attribute to the interface
-        onChange: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
+        onChange?: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
         className?: string
         sx?: any
     }

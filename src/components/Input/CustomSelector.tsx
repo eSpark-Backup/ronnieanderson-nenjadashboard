@@ -5,8 +5,10 @@ import { ReactNode } from 'react';
 
 const CustomSelector = ({ label, placeholder, options, required, name, onChange, className }: ICustomSelector) => {
     const handleSelectChange = (event: SelectChangeEvent<any>, child: ReactNode) => {
-        // Call the parent's onChange handler with the 'name' attribute
-        onChange(event, child, name || "");
+        // Check if onChange is defined before calling it
+        if (onChange) {
+            onChange(event, child, name || "");
+        }
     };
 
     return (
@@ -17,7 +19,7 @@ const CustomSelector = ({ label, placeholder, options, required, name, onChange,
                 id="demo-simple-select"
                 placeholder={placeholder}
                 defaultValue={options[0]?.value}
-                sx={{ width: "100%", borderRadius: "5px" }}
+                sx={{ width: "100%", borderRadius: "5px", border:"1px solid #D7D7D7" }}
                 onChange={handleSelectChange} // Use the local handleSelectChange function
             >
                 {options?.map((eachOption: any, index: number) => (
