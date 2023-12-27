@@ -65,7 +65,7 @@ declare global {
 
       interface ICustomButton {
         children: ReactElement | string
-        sx?: any,
+        className?: string[];
         variant?: "contained" | "text" | "outlined",
         color?: "inherit" | "primary" | "secondary" | "success" | "error" | "info" | "warning" | undefined,
         onClick?: MouseEventHandler<HTMLButtonElement>,
@@ -78,7 +78,7 @@ declare global {
         label?: string
         placeholder: string,
         type: string
-        sx?: any
+        className?: string[];
         startIcon?: ReactNode,
         onChange: ChangeEventHandler<HTMLInputElement>,
         onBlur?: FocusEventHandler<HTMLInputElement>,
@@ -99,8 +99,7 @@ declare global {
         required?: boolean;
         name?: string; // Add the 'name' attribute to the interface
         onChange: (event: SelectChangeEvent<any>, child: ReactNode, name: string) => void; // Update the 'onChange' type
-        className?: string
-        sx?: any
+        className?: string[];
     }
 
     interface IPackage extends IBase {

@@ -12,7 +12,7 @@ const Package = () => {
         <Typography color="#fff" variant='h4'>PACKAGE</Typography>
         <Stack mt={5} gap={3} direction={{ xs: "column", md: "row" }} alignItems="center" justifyContent="flex-start">
           <CustomSelector
-            className={classes.packageSelect}
+            className={[classes.packageSelect]}
             options={packageOptions}
             onChange={(e: any) => console.log(e)}
           />

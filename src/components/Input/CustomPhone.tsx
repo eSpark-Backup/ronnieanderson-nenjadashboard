@@ -7,7 +7,7 @@ import 'react-phone-input-2/lib/material.css';
 const CustomPhone = ({ onChange, name }: ICustomPhone) => {
     return (
         <Box>
-            <Typography textAlign="left" sx={{ marginBottom: "5px" }}>{"Phone Number"}</Typography>
+            <Typography textAlign="left" mb={1}>{"Phone Number"}</Typography>
             <PhoneInput
                 country={'in'}
                 placeholder="Enter phone number"

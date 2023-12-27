@@ -125,7 +125,7 @@ export const theme = createTheme({
                     paddingLeft: "6px",
                 },
                 notchedOutline: {
-                    border: "none",
+                    borderColor: "#E9EAEC",
                     borderRadius: "10px",
                 },
             },

@@ -2,9 +2,11 @@ import { Box, Divider, Stack, Typography } from '@mui/material'
 import CardLayout from '../CardLayout/CardLayout'
 import ComparisionHeader from './ComparisionHeader'
 import ComparsionStatus from '../ComparsionStatus/ComparsionStatus';
+import { styles } from '../../../utils/styles';
 
 
 const ComparisonCard = ({ data }: any) => {
+  const classes = styles.cardStyles({})
   const {
     Heading,
     HeadingImg,
@@ -16,42 +18,36 @@ const ComparisonCard = ({ data }: any) => {
   return (
     <CardLayout >
       <Box>
-        <Box sx={{ display: "flex", justifyContent: "center" }} >
+        <Stack direction="row" justifyContent="center" >
           <ComparisionHeader image={HeadingImg} heading={Heading} />
-        </Box>
-
-        <Divider sx={{
-          height: "3px",
-          my: 1,
-        }} />
-
-
-        <Box sx={{ display: "flex", p: 3 }}>
-          <Box sx={{ width: "20%" }}>
-            <Stack sx={{ gap: "10px" }}>
-              <Box sx={{ visibility: "hidden" }}>
+        </Stack>
+        <Divider className={classes.divider} />
+        <Stack direction="row" p={3}>
+          <Box width="20%">
+            <Stack gap="10px">
+              <Box visibility="hidden">
                 hidden
               </Box>
-              <Box sx={{ mt: "15px" }}>
-                <Typography sx={{ fontSize: 14, fontWeight: 600, mt: "5px" }}>Left</Typography>
-                <Typography sx={{ fontSize: 14, fontWeight: 600, mt: "10px" }}>Right</Typography>
+              <Box mt="15px">
+                <Typography fontSize={14} fontWeight={600} mt="5px">Left</Typography>
+                <Typography fontSize={14} fontWeight={600} mt="10px">Right</Typography>
               </Box>
             </Stack>
           </Box>
 
-          <Box sx={{ width: "80%", display: "flex", justifyContent: "space-between" }}>
-            <Stack sx={{ gap: "10px" }}>
+          <Stack direction="row" justifyContent="space-between" width='80%'>
+            <Stack gap="10px">
               <ComparisionHeader size="sm" image={SubHeadingImg} heading={SubHeading} />
               <ComparsionStatus />
               <ComparsionStatus />
             </Stack>
-            <Stack sx={{ gap: "10px" }}>
+            <Stack gap="10px">
               <ComparisionHeader size="sm" image={SubHeadingImg2} heading={SubHeading2} />
               <ComparsionStatus />
               <ComparsionStatus />
             </Stack>
-          </Box>
-        </Box>
+          </Stack>
+        </Stack>
       </Box>
     </CardLayout>
   )

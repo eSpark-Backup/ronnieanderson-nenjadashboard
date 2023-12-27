@@ -5,9 +5,11 @@ import LockIcon from '@mui/icons-material/Lock';
 import { useFormik } from 'formik';
 import { signInSchema } from '../schemas';
 import { logo } from '../assets';
+import { styles } from '../utils/styles';
 
 
 const SignIn: React.FC = () => {
+  const classes = styles.authStyles()
 
   const { values, errors, handleBlur, handleChange, handleSubmit, touched } = useFormik({
     initialValues: {
@@ -22,17 +24,17 @@ const SignIn: React.FC = () => {
 
   return (
     <Stack width="100%" height="100vh" direction="row" alignItems="center" justifyContent="center">
-      <Box sx={{ width: { xs: "100%", md: "660px" }, border: { xs: "0px", md: "1px solid #1D3B6A" }, borderRadius: "20px" }}>
-        <Stack direction="column" alignItems="center" justifyContent="center" sx={{ p: { xs: "30px", md: "78px" } }}>
-          <form style={{ display: "flex", justifyContent: 'center', alignItems: "center", flexDirection: "column" }} onSubmit={handleSubmit}>
+      <Box className={classes.mainContainer}>
+        <Stack direction="column" alignItems="center" justifyContent="center" className={classes.innerBox}>
+          <form className={classes.form} onSubmit={handleSubmit}>
             <img src={logo} width="175px" height="43px" alt="logo" />
-            <Typography sx={{ fontSize: "30px", fontWeight: 600, mt: 1 }}>Sign in</Typography>
-            <Typography sx={{ fontSize: "20px", fontWeight: 300, mb: 1 }}>to continue to Nenja</Typography>
+            <Typography fontSize="30px" fontWeight={600} mt={1}>Sign in</Typography>
+            <Typography fontSize="20px" fontWeight={300} mb={1}>to continue to Nenja</Typography>
 
             <CustomInput
               name="email"
-              startIcon={<PersonIcon style={{ color: '#E2E2E2' }} />}
-              sx={{ my: 1 }}
+              startIcon={<PersonIcon className={classes.icon} />}
+              className={[classes.signInInputs]}
               type="email"
               placeholder="philipjohn2023@gmail.com"
               onBlur={handleBlur}
@@ -46,8 +48,8 @@ const SignIn: React.FC = () => {
               onBlur={handleBlur}
               onChange={handleChange}
               name="password"
-              startIcon={<LockIcon style={{ color: '#E2E2E2' }} />}
-              sx={{ my: 1 }}
+              startIcon={<LockIcon className={classes.icon} />}
+              className={[classes.signInInputs]}
               type="password"
               placeholder="•••••••••"
               value={values.password}
@@ -59,10 +61,10 @@ const SignIn: React.FC = () => {
               <FormGroup>
                 <FormControlLabel control={<Checkbox defaultChecked />} label="Remember me" />
               </FormGroup>
-              <CustomButton variant="text" sx={{ width: "max-content" }}>Forgot password?</CustomButton>
+              <CustomButton variant="text" className={[classes.forgotPasswordButton]}>Forgot password?</CustomButton>
             </Stack>
-            <CustomButton type={"submit"} sx={{ width: "200px", mt: 5, height: "50px" }}>Sign in</CustomButton>
-            <Typography sx={{ fontSize: "16px", mt: 5 }}>Terms and Conditions <span style={{ margin: "0 10px" }}>|</span> Privacy Policy</Typography>
+            <CustomButton type={"submit"} className={[classes.signInButton]}>Sign in</CustomButton>
+            <Typography fontSize="15px" mt={5}>Terms and Conditions <span className={classes.divider}>|</span> Privacy Policy</Typography>
           </form>
         </Stack>
       </Box>
