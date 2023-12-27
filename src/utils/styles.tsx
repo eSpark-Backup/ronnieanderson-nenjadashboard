@@ -203,7 +203,7 @@ const payOutScreenStyles = makeStyles({
 
 });
 
-export const profileMainStyles = makeStyles({
+const profileMainStyles = makeStyles({
     profileConatiner: {
         padding: "20px 20px 20px 20px",
     },
@@ -260,7 +260,7 @@ export const profileMainStyles = makeStyles({
         position: "absolute",
         bottom: "5px",
         right: "-6px",
-        cursor:"pointer"
+        cursor: "pointer"
     },
     '@media (max-width:550px)': {
         profileFooter: {
@@ -275,10 +275,40 @@ export const profileMainStyles = makeStyles({
     },
 })
 
+const newTeamStyles = makeStyles({
+    mainHeading: {
+        color: "#1D3B6A !important",
+        fontSize: "25px !important",
+        fontWeight: "600 !important"
+    },
+    buttonBox: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginTop: "40px"
+    },
+    checkBox: {
+        marginTop: "55px"
+    },
+    footer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    '@media (max-width:1000px)': {
+        buttonBox:{
+            marginTop: "15px"
+        }
+    },
+})
+
+
+
+
 export const styles = {
     tableStyle,
     packageStyle,
     payOutScreenStyles,
-    profileMainStyles
+    profileMainStyles,
+    newTeamStyles
 }
 

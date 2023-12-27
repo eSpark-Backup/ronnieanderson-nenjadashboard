@@ -145,7 +145,7 @@ const Account = () => {
                   <CustomButton sx={{ width: "150px", height: "50px" }}>
                     Update
                   </CustomButton>
-                  <CustomButton sx={{ width: "150px", height: "50px", background: "transparent", color: "#1D3B6A", border: "1px solid #1D3B6A" }}>
+                  <CustomButton color='secondary' sx={{ width: "150px", height: "50px", color: "#1D3B6A", border: "1px solid #1D3B6A" }}>
                     Cancel
                   </CustomButton>
                 </Box>

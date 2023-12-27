@@ -18,6 +18,7 @@ import {
   Support
 } from './pages';
 import LoggedinLayout from './layout';
+import TeamNew from './pages/team/new';
 
 function App() {
   return useRoutes([
@@ -31,6 +32,7 @@ function App() {
         { path: "/profile/password", element: <Password /> },
         { path: "/profile/2fa", element: <Fa /> },
         { path: "/package", element: <Package /> },
+        { path: "/team/new", element: <TeamNew /> },
         { path: "/team/direct", element: <Direct /> },
         { path: "/team/downline", element: <Downline /> },
         { path: "/income/referral", element: <Referral /> },
