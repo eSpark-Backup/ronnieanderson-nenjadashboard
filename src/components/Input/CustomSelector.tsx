@@ -1,22 +1,26 @@
 import { Box, MenuItem, Select, Typography, SelectChangeEvent } from '@mui/material';
 import { ReactNode } from 'react';
+import { styles } from '../../utils/styles';
 
 
 
-const CustomSelector = ({ label, placeholder, options, required, name, onChange }: ICustomSelector) => {
+const CustomSelector = ({ label, placeholder, options, required, name, onChange, className }: ICustomSelector) => {
+    const classes = styles.inputStyles()
     const handleSelectChange = (event: SelectChangeEvent<any>, child: ReactNode) => {
-        // Call the parent's onChange handler with the 'name' attribute
-        onChange(event, child, name);
+        // Check if onChange is defined before calling it
+        if (onChange) {
+            onChange(event, child, name || "");
+        }
     };
 
     return (
         <Box>
-            <Typography textAlign="left" sx={{ marginBottom: "5px" }}>{label}{required ? "*" : ""}</Typography>
+            {label && <Typography textAlign="left" mb={1}>{label}{required ? "*" : ""}</Typography>}
             <Select
+                className={className ? [classes.customInput, ...className].join(" ") : classes.customInput}
                 id="demo-simple-select"
                 placeholder={placeholder}
                 defaultValue={options[0]?.value}
-                sx={{ width: "100%", borderRadius: "5px" }}
                 onChange={handleSelectChange} // Use the local handleSelectChange function
             >
                 {options?.map((eachOption: any, index: number) => (

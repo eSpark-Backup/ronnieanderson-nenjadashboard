@@ -1,13 +1,15 @@
 import { useState } from "react"
 import { Box, IconButton, InputAdornment, TextField, Typography } from "@mui/material"
 import { closeEye, eye } from "../../assets"
+import { styles } from "../../utils/styles"
 
 
 
-const CustomInput = ({ startIcon, required, label, placeholder, type, sx, onChange, name, onBlur, value, error, helperText }: ICustomInput) => {
+const CustomInput = ({ startIcon, required, label, placeholder, type, className, onChange, name, onBlur, value, error, helperText }: ICustomInput) => {
+  const classes = styles.inputStyles()
   const [showPassword, setShowPassword] = useState(false)
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box className={classes.container}>
       <Typography mb={1} textAlign="left">{label}{required ? "*" : ""}</Typography>
       <TextField
         helperText={error ? helperText : ""}
@@ -17,7 +19,7 @@ const CustomInput = ({ startIcon, required, label, placeholder, type, sx, onChan
         onChange={onChange}
         name={name}
         type={type === "password" ? (showPassword ? "text" : "password") : type}
-        sx={{ width: "100%", borderRadius: "5px", ...sx }}
+        className={className ? [classes.customInput, ...className].join(" ") : classes.customInput}
         placeholder={placeholder}
         InputProps={{
           startAdornment: startIcon ? (
@@ -30,7 +32,7 @@ const CustomInput = ({ startIcon, required, label, placeholder, type, sx, onChan
               <IconButton onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? (
                   <img
-                    style={{ objectFit: "contain" }}
+                    className={classes.img}
                     src={eye}
                     width={"15px"}
                     height={"15px"}
@@ -38,7 +40,7 @@ const CustomInput = ({ startIcon, required, label, placeholder, type, sx, onChan
                   />
                 ) : (
                   <img
-                    style={{ objectFit: "contain" }}
+                    className={classes.img}
                     src={closeEye}
                     width={"15px"}
                     height={"15px"}

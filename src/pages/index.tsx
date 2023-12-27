@@ -1,9 +1,9 @@
 import SignIn from "./SignIn"
 import Signup from "./Signup"
 import Dashboard from "./dashboard"
-import { Account, Password, Fa } from "./profile"
+import { Account, Fa } from "./profile"
 import Package from "./package"
-import { Direct, Downline } from "./team"
+import { New, Direct, Downline } from "./team"
 import { Referral, TeamBonus, RankBonus } from "./income"
 import Ledger from "./ledger"
 import Payout from "./payout"
@@ -16,9 +16,9 @@ export {
     Signup,
     Dashboard,
     Account,
-    Password,
     Fa,
     Package,
+    New,
     Direct,
     Downline,
     Referral,

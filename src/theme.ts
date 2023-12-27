@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export const theme = createTheme({
     breakpoints: {
@@ -11,6 +12,25 @@ export const theme = createTheme({
         },
     },
     components: {
+        MuiTabs: {
+            styleOverrides: {
+                indicator: {
+                    backgroundColor: '#51C9F4',
+                },
+            },
+        },
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    color: '#7C7F84',
+                    '&.Mui-selected': {
+                        color: '#1D3B6A',
+                        fontWeight: "bolder",
+
+                    },
+                },
+            },
+        },
         MuiTypography: {
             defaultProps: {
                 color: 'primary'
@@ -132,19 +152,19 @@ export const theme = createTheme({
         MuiTableHead: {
             styleOverrides: {
                 root: {
-                    backgroundColor: "#FAFAFA",
+                    backgroundColor: "#7C7F84",
                     ".MuiTableCell-root": {
-                        color: "#687588",
+                        color: "#FFFFFF",
                     },
                     borderBottom: "none",
                     "& .MuiTableCell-root": {
                         borderBottom: "none",
                         fontSize: "12px",
-                        fontWeight: 700,
+                        fontWeight: 400,
                         lineHeight: 1,
                         letterSpacing: 0.5,
                         textTransform: "initial",
-                        color: "#687588",
+                        color: "#FFFFFF",
                     },
                 },
             },
@@ -153,7 +173,6 @@ export const theme = createTheme({
             styleOverrides: {
                 root: {
                     "& .MuiTableCell-root": {
-                        borderBottom: "1px solid #f1f2f4",
                         color: "#111827",
                         fontSize: "12px",
                     },
@@ -168,7 +187,17 @@ export const theme = createTheme({
                     marginRight: "8px",
                 },
             },
+            defaultProps: {
+                IconComponent: KeyboardArrowDownIcon,
+            },
         },
+        MuiPaginationItem: {
+            styleOverrides: {
+                root: {
+                    border: "1px solid #1D3B6A",
+                }
+            }
+        }
     },
 
     palette: {
@@ -228,7 +257,7 @@ export const theme = createTheme({
         },
     },
     shape: {
-        borderRadius: 8,
+        // borderRadius: 8,
     },
     shadows: [
         "none",
@@ -263,7 +292,7 @@ export const theme = createTheme({
         },
         fontFamily: `"Montserrat", "sans-serif"`,
         // fontFamily: `"Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-		// 	 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`,
+        // 	 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"`,
         body1: {
             fontSize: "1rem",
             fontWeight: 400,

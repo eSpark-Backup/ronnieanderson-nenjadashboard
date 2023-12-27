@@ -29,8 +29,16 @@ import PayoutIcon from "./PayoutIcon.png"
 import MarketingIcon from "./MarketingIcon.png"
 import SupportIcon from "./SupportIcon.png"
 import LogoutIcon from "./LogoutIcon.png"
-
-
+import NoData from "./no-data.svg"
+import diamondRank from "./Diamond.png"
+import doubleDiamond from "./Double Diamond.png"
+import ruby from "./Ruby.png"
+import sapphire25 from "./25 Sapphire.png"
+import sapphire from "./Sapphire.png"
+import crownDiamond from "./Royal Crown Diamond.png"
+import calendar from "./calander.png"
+import filter from "./filter.png"
+import packageBg from "./Package-bg.png"
 
 export {
     Limit5x,
@@ -62,5 +70,15 @@ export {
     PayoutIcon,
     MarketingIcon,
     SupportIcon,
-    LogoutIcon
+    LogoutIcon,
+    NoData,
+    diamondRank,
+    doubleDiamond,
+    ruby,
+    sapphire25,
+    sapphire,
+    crownDiamond,
+    calendar,
+    filter,
+    packageBg,
 }

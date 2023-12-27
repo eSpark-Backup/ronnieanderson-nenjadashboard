@@ -1,18 +1,20 @@
-import { Stack } from '@mui/system'
+import { Stack } from '@mui/material'
 import React from 'react'
 import CardLayout from '../Card/CardLayout/CardLayout'
 import CustomButton from '../Button/customButton'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { styles } from '../../utils/styles';
 
 const Tabs = () => {
+    const classes = styles.referralStyles()
     return (
         <Stack direction={"row"} gap={2}>
-            <CardLayout sx={{ width: "100%", minHeight: "40px" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", paddingRight: "10px", paddingLeft: "10px", gap:"5px" }}>
-                    <CustomButton sx={{ backgroundColor: "#AFB1AE", height: "40px", fontSize: "15px", width: "150px" }} startIcon={<ArrowBackIosIcon />}>Side A</CustomButton>
-                    <CustomButton sx={{ backgroundColor: "#AFB1AE", height: "40px", fontSize: "15px", width: "150px" }} endIcon={<ArrowForwardIosIcon />}>Side B</CustomButton>
-                </div>
+            <CardLayout className={[classes.tabsLayout]}>
+                <Stack direction="row" justifyContent="space-between" px="10px" flexWrap="wrap" gap="5px">
+                    <CustomButton className={[classes.buttons]} startIcon={<ArrowBackIosIcon />}>Side A</CustomButton>
+                    <CustomButton className={[classes.buttons]} endIcon={<ArrowForwardIosIcon />}>Side B</CustomButton>
+                </Stack>
             </CardLayout>
         </Stack>
     )

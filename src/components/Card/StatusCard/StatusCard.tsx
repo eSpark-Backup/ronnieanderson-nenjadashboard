@@ -1,18 +1,18 @@
-import { Box, Typography } from "@mui/material"
+import { Stack, Box, Typography } from "@mui/material"
 
-const StatusCard = ( props : IStatusCard) => {
+const StatusCard = (props: IStatusCard) => {
   const { icon, heading, value, focus, extraInfo, notIcon } = props
   return (
-    <Box sx={{ display: "flex", gap: "5px", minWidth: "170px" }}>
+    <Stack direction="row" gap="5px" minWidth="170px">
       <Box >
-        {notIcon ? <Box sx={{width: "40px"}}>{icon}</Box> : <img src={icon} alt="amount" width={"40px"} />}
+        {notIcon ? <Box width="40px">{icon}</Box> : <img src={icon} alt="amount" width={"40px"} />}
       </Box>
       <Box>
-        <Typography sx={{ fontSize: "12px", }}>{heading}</Typography>
-        <Typography sx={{ color: "black", fontSize: focus ? "30px" : "20px", fontWeight: 600 }}>{value}</Typography>
+        <Typography fontSize="12px">{heading}</Typography>
+        <Typography color="#000" fontWeight={600} fontSize={focus ? "30px" : "20px"}>{value}</Typography>
         {extraInfo}
       </Box>
-    </Box>
+    </Stack>
   )
 }
 

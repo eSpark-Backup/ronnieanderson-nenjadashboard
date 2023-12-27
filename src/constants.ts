@@ -1,0 +1,693 @@
+import {
+  Team,
+  Direct,
+  Downline,
+  ActiveHead,
+  Active,
+  Business,
+  Inactive,
+  Settled,
+  DashboardIcon,
+  ProfileIcon,
+  PackageIcon,
+  TeamIcon,
+  IncomeIcon,
+  LedgerIcon,
+  PayoutIcon,
+  MarketingIcon,
+  SupportIcon,
+  LogoutIcon
+} from "./assets"
+
+
+export const SigupData = [
+  {
+    label: "Sponsor Username",
+    type: "text",
+    required: true,
+    placeholder: "NENJA123456789",
+    name: "sponsorName"
+  },
+  {
+    label: "Username",
+    type: "text",
+    required: true,
+    placeholder: "philipjohn2023",
+    name: "username"
+  },
+  {
+    label: "First Name",
+    type: "text",
+    required: false,
+    placeholder: "Philip",
+    name: "firstName"
+  },
+  {
+    label: "Last Name",
+    type: "text",
+    required: false,
+    placeholder: "John",
+    name: "lastName"
+  },
+  {
+    label: "Country",
+    type: "select",
+    options: [{ value: 10, text: "India" }, { value: 20, text: "Pakistan" }],
+    required: false,
+    placeholder: "India",
+    name: "country"
+  },
+  {
+    label: "Phone Number",
+    type: "phone",
+    required: false,
+    placeholder: "Enter your phone number",
+    name: "phone"
+  },
+  {
+    label: "Email Address",
+    type: "email",
+    required: false,
+    placeholder: "xyz@gmail.com",
+    name: "email"
+  },
+  {
+    label: "Password",
+    type: "password",
+    required: false,
+    placeholder: "Enter your password",
+    name: "password"
+  },
+  {
+    label: "Confirm Password",
+    type: "password",
+    required: false,
+    placeholder: "Enter your confirm password",
+    name: "confirmPassword"
+  },
+
+]
+
+
+
+export const sidebarRoutes = [
+  {
+    href: `/dashboard`,
+    icon: DashboardIcon,
+    activeIcon: DashboardIcon,
+    title: "Dashboard",
+    childs: null,
+    type: "link",
+  },
+  {
+    href: `/profile`,
+    icon: ProfileIcon,
+    activeIcon: ProfileIcon,
+    title: "Profile",
+    childs: [
+      {
+        title: "Account",
+        href: "/profile/account",
+      },
+      {
+        title: "2FA",
+        href: "/profile/2fa",
+      },
+    ],
+  },
+  {
+    href: `/package`,
+    icon: PackageIcon,
+    activeIcon: PackageIcon,
+    title: "Package",
+    childs: null,
+    type: "link",
+  },
+  {
+    href: `/team`,
+    icon: TeamIcon,
+    activeIcon: TeamIcon,
+    title: "Team",
+    childs: [
+      {
+        title: "New",
+        href: "/team/new",
+      },
+      {
+        title: "Direct",
+        href: "/team/direct",
+      },
+      {
+        title: "Downline",
+        href: "/team/downline",
+      },
+    ],
+  },
+  {
+    href: `/income`,
+    icon: IncomeIcon,
+    activeIcon: IncomeIcon,
+    title: "Income",
+    childs: [
+      {
+        title: "Referral",
+        href: "/income/referral",
+      },
+      {
+        title: "Team Bonus",
+        href: "/income/team-bonus",
+      },
+      {
+        title: "Rank Bonus",
+        href: "/income/rank-bonus",
+      },
+    ],
+  },
+  {
+    href: `/ledger`,
+    icon: LedgerIcon,
+    activeIcon: LedgerIcon,
+    title: "Ledger",
+    childs: null,
+    type: "link",
+  },
+  {
+    href: `/payout`,
+    icon: PayoutIcon,
+    activeIcon: PayoutIcon,
+    title: "Payout",
+    childs: null,
+    type: "link",
+  },
+  {
+    href: `/marketing-material`,
+    icon: MarketingIcon,
+    activeIcon: MarketingIcon,
+    title: "Marketing Material",
+    childs: null,
+    type: "link",
+  },
+  {
+    href: `/support`,
+    icon: SupportIcon,
+    activeIcon: SupportIcon,
+    title: "Support",
+    childs: null,
+    type: "link",
+  },
+  {
+    href: `/sign-in`,
+    icon: LogoutIcon,
+    activeIcon: LogoutIcon,
+    title: "logout",
+    childs: null,
+    type: "logout",
+  },
+];
+
+export const BussinsessData = {
+  Heading: "Business",
+  HeadingImg: Business,
+  SubHeading: "Settled",
+  SubHeadingImg: Settled,
+  SubHeading2: "Unsettled",
+  SubHeadingImg2: Settled,
+}
+
+export const TeamData = {
+  Heading: "Team",
+  HeadingImg: Team,
+  SubHeading: "Directs",
+  SubHeadingImg: Direct,
+  SubHeading2: "Downline",
+  SubHeadingImg2: Downline,
+}
+
+export const ActiveInacitveData = {
+  Heading: "Active / Inactive",
+  HeadingImg: ActiveHead,
+  SubHeading: "Active",
+  SubHeadingImg: Active,
+  SubHeading2: "Inactive",
+  SubHeadingImg2: Inactive,
+}
+
+export const payOutDetailsTypeOne = [
+  {
+    buttonText: "Withdrawal Amount",
+    inputText: "$500.00"
+  },
+  {
+    buttonText: "USDT Address",
+    inputText: "Enter USDT - TRC 20 Adress"
+  },
+]
+
+export const payOutDetailsTypeTwo = [
+  {
+    buttonText: "Email Code",
+    inputText: "781236478",
+    hasButton: true,
+    button2Text: "Send Code"
+  }, {
+    buttonText: "2FA Code",
+    inputText: "sd78542sd2265",
+    hasIcon: true
+  }
+]
+export const packageData: IPackage[] = [
+  {
+    id: "1",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "2",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "3",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "4",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "5",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "6",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+  {
+    id: "7",
+    date: "08/12/2023",
+    package: "Package",
+    status: false,
+  },
+  {
+    id: "8",
+    date: "08/12/2023",
+    package: "Package",
+    status: true,
+  },
+];
+
+export const packageOptions = [
+  { value: "$500", text: "$500" },
+  { value: "$800", text: "$800" },
+  { value: "$1000", text: "$1000" },
+]
+
+export const directTeamData: IDirectTeam[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Diamond"
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Double Diamond"
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Philippines",
+    position: "Left",
+    rank: "Ruby"
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Poland",
+    position: "Right",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Double Diamond"
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Philippines",
+    position: "Left",
+    rank: "Sapphire"
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Poland",
+    position: "Right",
+    rank: "Royal Crown Diamond"
+  },
+  {
+    id: "9",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Germany",
+    position: "Left",
+    rank: "Sapphire 25"
+  },
+  {
+    id: "10",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    email: "philipjohn2023@gmail.com",
+    activationDate: "17/11/2023",
+    country: "Norway",
+    position: "Right",
+    rank: "Ruby"
+  },
+]
+
+export const incomeReferralData: IIncomeReferral[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Germany",
+    amount: "$75,000.00"
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Norway",
+    amount: "$75,000.00"
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Philippines",
+    amount: "$75,000.00"
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Poland",
+    amount: "$75,000.00"
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Germany",
+    amount: "$75,000.00"
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Norway",
+    amount: "$75,000.00"
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Philippines",
+    amount: "$75,000.00"
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Poland",
+    amount: "$75,000.00"
+  },
+  {
+    id: "9",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Germany",
+    amount: "$75,000.00"
+  },
+  {
+    id: "10",
+    date: "17/11/2023",
+    userName: "philipjohn2023",
+    country: "Norway",
+    amount: "$75,000.00"
+  },
+]
+
+export const incomeTeamBonusData: IIncomeTeamBonus[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "9",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+  {
+    id: "10",
+    date: "17/11/2023",
+    settledBusiness: "10,000.00",
+    amount: "$75,000.00"
+  },
+]
+
+
+export const accountSettingsData = [
+  {
+    label: "First Name",
+    type: "text",
+    required: false,
+    placeholder: "Philip",
+    name: "firstName"
+  },
+  {
+    label: "Last Name",
+    type: "text",
+    required: false,
+    placeholder: "John",
+    name: "lastName"
+  },
+  {
+    label: "Username",
+    type: "text",
+    required: false,
+    placeholder: "philipjohn2023",
+    name: "username"
+  },
+  {
+    label: "Phone Number",
+    type: "phone",
+    required: false,
+    placeholder: "9812345678",
+    name: "phone"
+  },
+  {
+    label: "Country",
+    type: "select",
+    options: [{ value: 10, text: "India" }, { value: 20, text: "Pakistan" }],
+    required: false,
+    placeholder: "India",
+    name: "country"
+  },
+  {
+    label: "Email Address",
+    type: "email",
+    required: false,
+    placeholder: "xyz@gmail.com",
+    name: "email"
+  },
+]
+
+export const accountSecurityData = [
+  {
+    label: "Old Password",
+    type: "password",
+    required: false,
+    placeholder: "•••••••••",
+    name: "oldPassword"
+  },
+  {
+    label: "New Password",
+    type: "password",
+    required: false,
+    placeholder: "•••••••••",
+    name: "newPassword"
+  },
+  {
+    label: "Confirm New Password",
+    type: "password",
+    required: false,
+    placeholder: "12345678910",
+    name: "confirmPassword"
+  },
+]
+
+export const newTeamData = [
+  {
+    label: "Referral ID",
+    type: "text",
+    required: true,
+    placeholder: "NENJA123456789",
+    name: "referralID"
+  },
+  {
+    hasButton:true
+  },
+  {
+    label: "First Name",
+    type: "text",
+    required: false,
+    placeholder: "Philip",
+    name: "firstName"
+  },
+  {
+    label: "Last Name",
+    type: "text",
+    required: false,
+    placeholder: "John",
+    name: "lastName"
+  },
+  {
+    label: "Username",
+    type: "text",
+    required: false,
+    placeholder: "philipjohn2023",
+    name: "username"
+  },
+  {
+    label: "Phone Number",
+    type: "phone",
+    required: false,
+    placeholder: "Enter your phone number",
+    name: "phone"
+  },
+  {
+    label: "Country",
+    type: "select",
+    options: [{ value: 10, text: "India" }, { value: 20, text: "Pakistan" }],
+    required: false,
+    placeholder: "India",
+    name: "country"
+  },
+  {
+    label: "Email Address",
+    type: "email",
+    required: false,
+    placeholder: "xyz@gmail.com",
+    name: "email"
+  },
+  {
+    label: "Password",
+    type: "password",
+    required: false,
+    placeholder: "Enter your password",
+    name: "password"
+  },
+  {
+    label: "Confirm Password",
+    type: "password",
+    required: false,
+    placeholder: "Enter your confirm password",
+    name: "confirmPassword"
+  },
+]

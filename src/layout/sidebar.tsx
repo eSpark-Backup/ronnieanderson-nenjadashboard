@@ -3,14 +3,17 @@ import { Theme as MuiTheme } from "@mui/material/styles";
 import {
     Box,
     Drawer,
+    Stack,
     useMediaQuery,
 } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Logo } from "../components";
 import { NavItem } from "./nav-item";
 import { sidebarRoutes } from "../constants";
+import { styles } from "../utils/styles";
 
 export const Sidebar = (props: ISidebar) => {
+    const classes = styles.sidebarStyles()
     const navigate = useNavigate()
     const { open, onClose } =
         props;
@@ -49,33 +52,16 @@ export const Sidebar = (props: ISidebar) => {
 
     const content = (
         <>
-            <Box
-                className="logged-in-sidebar-wrapper"
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%",
-                }}
-            >
+            <Stack height="100%">
                 <div>
-                    <Box
-                        sx={{
-                            pt: 2,
-                            pb: 2.5,
-                            px: 3.5,
-                            mt: 5,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                        }}
-                    >
-                        <Box sx={{ cursor: "pointer" }} onClick={() => navigate('/dashboard')}>
+                    <Box className={classes.logoContainer}>
+                        <Box className={classes.logoWrapper} onClick={() => navigate('/dashboard')}>
                             <Logo />
                         </Box>
                     </Box>
                 </div>
-                <Box sx={{ flexGrow: 1, px: 5 }}>{items()}</Box>
-            </Box>
+                <Box className={classes.listing}>{items()}</Box>
+            </Stack>
         </>
     );
 
@@ -85,13 +71,7 @@ export const Sidebar = (props: ISidebar) => {
                 anchor="left"
                 open
                 PaperProps={{
-                    sx: {
-                        color: "#FFFFFF",
-                        width: 280,
-                        boxShadow: "none",
-                        borderRight: "1px solid #E9EAEC",
-                        transition: "0.3s",
-                    },
+                    className: classes.upDrawerPaper
                 }}
                 variant={"permanent"}
             >
@@ -106,12 +86,8 @@ export const Sidebar = (props: ISidebar) => {
             onClose={onClose}
             open={open}
             PaperProps={{
-                sx: {
-                    color: "#FFFFFF",
-                    width: 280,
-                },
+                className: classes.drawerPaper
             }}
-            sx={{ zIndex: (theme) => theme.zIndex.appBar + 100 }}
             variant="temporary"
         >
             {content}
