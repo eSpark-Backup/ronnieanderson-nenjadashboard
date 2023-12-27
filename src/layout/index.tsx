@@ -29,7 +29,7 @@ const LoggedinLayout = () => {
 
     const getPrimaryBg = () => {
         //insert the paths where blue color is required
-        const paths = ["/team/direct", '/income/referral', "/income/team-bonus", "/payout"]
+        const paths = ["/team/direct", '/income/referral', "/income/team-bonus", "/payout", "/profile/account"]
         return paths.includes(pathname)
     }
 

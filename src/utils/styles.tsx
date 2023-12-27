@@ -40,7 +40,7 @@ const packageStyle = makeStyles({
         padding: "30px",
         '@media (min-width: 1000px)': {
             backgroundSize: '103%',
-          },
+        },
     },
     packageSelect: {
         minWidth: "200px",
@@ -628,10 +628,115 @@ const sidebarStyles = makeStyles({
 })
 
 
+export const profileMainStyles = makeStyles({
+    ProfileMainContainer: {
+        display: 'flex',
+    },
+    profileName: {
+        fontSize: 20,
+        fontWeight: 600,
+    },
+    profileSectionContainer: {
+        backgroundColor: '#F9F9F9',
+        height: "100%",
+        paddingTop: "10px",
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+        rowGap: "10px"
+
+    },
+    diamondHeading: {
+        fontSize: 16,
+    },
+    buttons: {
+        width: "150px",
+        height: "50px"
+    },
+    updatePwButton: {
+        width: "200px",
+        height: "50px"
+    },
+    faButton: {
+        width: "90%",
+        height: "70px"
+    },
+    profileConatiner: {
+        padding: "20px 20px 20px 20px",
+    },
+    profileFooter: {
+        display: "flex",
+        marginTop: "50px",
+        justifyContent: "flex-end",
+        gap: "4px",
+        flexWrap: "wrap"
+    },
+    securityFooterParent: {
+        display: "flex"
+    },
+    securityFooterChild: {
+        display: "flex",
+        columnGap: "4px",
+        backgroundColor: "#F9F9F9",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        padding: "10px 0px 10px 0px",
+        gap: "3px",
+        borderRadius: "20px",
+        marginTop: "8px"
+    },
+    securityFooterImage: {
+        width: "90%"
+    },
+    securityHeading: {
+        fontSize: "25px !important",
+        color: "#1D3B6A !important",
+        fontWeight: "bold !important"
+    },
+    userName: {
+        fontSize: "30px !important",
+        fontWeight: "bolder !important",
+        color: "#1D3B6A !important"
+    },
+    userRank1: {
+        textAlign: "center",
+        color: "#1D3B6A !important",
+        fontWeight: "300 !important"
+    },
+    userRank2: {
+        textAlign: "center",
+        color: "#1D3B6A !important",
+        fontWeight: "bold !important",
+        fontSize: "30px !important"
+    },
+    profileBox: {
+        position: "relative"
+    },
+    imageIcon: {
+        position: "absolute",
+        bottom: "5px",
+        right: "-6px",
+        cursor: "pointer"
+    },
+    '@media (max-width:550px)': {
+        profileFooter: {
+            justifyContent: "center"
+        },
+        securityFooterParent: {
+            justifyContent: "center"
+        },
+        profileConatiner: {
+            padding: "20px 0px 20px 0px",
+        }
+    },
+})
+
 export const styles = {
     tableStyle,
     packageStyle,
     payOutScreenStyles,
+    profileMainStyles,
     dateRangePickerStyles,
     customButtonStyles,
     cardStyles,

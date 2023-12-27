@@ -7,8 +7,10 @@ import { styles } from '../../utils/styles';
 const CustomSelector = ({ label, placeholder, options, required, name, onChange, className }: ICustomSelector) => {
     const classes = styles.inputStyles()
     const handleSelectChange = (event: SelectChangeEvent<any>, child: ReactNode) => {
-        // Call the parent's onChange handler with the 'name' attribute
-        onChange(event, child, name || "");
+        // Check if onChange is defined before calling it
+        if (onChange) {
+            onChange(event, child, name || "");
+        }
     };
 
     return (
