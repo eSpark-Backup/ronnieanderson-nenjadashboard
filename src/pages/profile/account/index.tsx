@@ -12,6 +12,7 @@ import { accountSecurityData, accountSettingsData } from '../../../constants';
 import profile from "../../../assets/photo.png"
 import rank from "../../../assets/rank icon.png"
 import logo from "../../../assets/logos.png"
+import pic from "../../../assets/Group 2330.png"
 
 // Define a simple TabPanel component
 const TabPanel: React.FC<{ value: string, index: string, children: React.ReactNode }> = ({ value, index, children }) => {
@@ -74,7 +75,7 @@ const Account = () => {
             '&.Mui-selected': {
               color: '#1D3B6A',
               fontWeight: "bolder",
-              
+
             },
           },
         },
@@ -88,8 +89,9 @@ const Account = () => {
         <Grid container>
           <Grid item xs={12} md={3}>
             <Box className={classes.profileSectionContainer}>
-              <Box>
+              <Box className={classes2.profileBox}>
                 <img src={profile} alt="Profile" />
+                <img src={pic} alt="" className={classes2.imageIcon} />
               </Box>
               <Typography className={classes2.userName}>Philip John</Typography>
               <Box>

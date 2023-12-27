@@ -253,6 +253,15 @@ export const profileMainStyles = makeStyles({
         fontWeight: "bold !important",
         fontSize: "30px !important"
     },
+    profileBox: {
+        position: "relative"
+    },
+    imageIcon: {
+        position: "absolute",
+        bottom: "5px",
+        right: "-6px",
+        cursor:"pointer"
+    },
     '@media (max-width:550px)': {
         profileFooter: {
             justifyContent: "center"
