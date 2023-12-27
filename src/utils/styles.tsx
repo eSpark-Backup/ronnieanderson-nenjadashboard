@@ -732,11 +732,49 @@ export const profileMainStyles = makeStyles({
     },
 })
 
+const newStyles = makeStyles({
+    container: {
+        padding: "20px 20px 20px 40px"
+    },
+    tabsButton: {
+        width: "25%"
+    },
+    createButton: {
+        width: "200px",
+        marginTop: "20px",
+        height: "55px"
+    },
+    mainHeading: {
+        color: "#1D3B6A !important",
+        fontSize: "25px !important",
+        fontWeight: "600 !important"
+    },
+    buttonBox: {
+        display: "flex",
+        justifyContent: "space-between",
+        marginTop: "40px"
+    },
+    checkBox: {
+        marginTop: "55px"
+    },
+    footer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    '@media (max-width:1000px)': {
+        buttonBox: {
+            marginTop: "15px"
+        }
+    },
+})
+
 export const styles = {
     tableStyle,
     packageStyle,
     payOutScreenStyles,
     profileMainStyles,
+    newStyles,
     dateRangePickerStyles,
     customButtonStyles,
     cardStyles,
