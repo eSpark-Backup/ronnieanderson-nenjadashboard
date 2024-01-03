@@ -132,4 +132,10 @@ declare global {
         date: string,
         tradingProfit: string,
     }
+    interface IDeposite extends IBase {
+        date: string,
+        address: string,
+        amount:String,
+        status:boolean
+    }
 }

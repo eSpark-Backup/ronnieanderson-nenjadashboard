@@ -769,6 +769,109 @@ const newStyles = makeStyles({
     },
 })
 
+const depositeStyle = makeStyles({
+    mainContainer: {
+        padding: "20px 20px 20px 40px"
+    },
+    mainHeading: {
+        color: "#1D3B6A !important",
+        fontSize: "25px !important",
+        fontWeight: "600 !important"
+    },
+    contentBoxParent: {
+        width: "100%",
+        minHeight: "400px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    contentBox: {
+        width: "70%",
+        minHeight: "80%",
+        borderRadius: "8px",
+        boxShadow: "-1px 0px 7px 2px rgba(112,112,112,0.69)",
+        display: "flex",
+        justifyContent: "space-around",
+        alignItems: "center",
+        padding: "15px 10px 15px 10px"
+    },
+    contentBoxLeft: {
+        width: "40%",
+        display: "flex",
+        flexDirection: "column",
+        rowGap: "30px",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    contentBoxRight: {
+        width: "40%",
+        display: "flex",
+        flexDirection: "column",
+        rowGap: "15px",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    contentBoxRightHead:{
+        color:"#1d3b6a !important",
+        fontWeight:"bold !important"
+    },
+    contentBoxLeftButton1: {
+        width: "80%",
+    },
+    contentBoxLeftButton2: {
+        width: "80%",
+        backgroundColor:"#7c7f84 !important"
+    },
+    contentBoxRightButton: {
+        width: "100%",
+        background: "transparent !important",
+        border: "1px solid #E3E3E3 !important",
+        color: "black !important",
+        fontWeight:"lighter !important",
+        fontSize:"12px !important",
+        overflow: "hidden",
+        whiteSpace: "nowrap",
+        textOverflow: "ellipsis"
+    },
+    contentBoxLeftText: {
+        width: "80%",
+        textAlign: "center",
+        color: "#333333 !important",
+        fontSize: "15px !important",
+        fontWeight: "600 !important"
+    },
+    contentBoxRightFooter: {
+        textAlign: "center",
+        color:"#333333 !important",
+        fontWeight:"400 !important"
+    },
+    contentBoxRightBold: {
+        color:"#333333 !important",
+        fontWeight:"600 !important"
+    },
+    '@media (max-width:1200px)': {
+        contentBox: {
+            flexDirection: "column",
+            rowGap:"20px",
+            marginTop:"20px"
+        },
+        contentBoxLeft: {
+            width: "100%"
+        },
+        contentBoxRight: {
+            width: "100%"
+        }
+    },
+    '@media (max-width:600px)': {
+        contentBox:{
+            width:"90%"
+        },
+        mainContainer:{
+            padding: "20px 5px 20px 5px"
+        }
+    },
+})
+
 export const styles = {
     tableStyle,
     packageStyle,
@@ -783,5 +886,6 @@ export const styles = {
     authStyles,
     layoutStyles,
     sidebarStyles,
+    depositeStyle
 }
 
