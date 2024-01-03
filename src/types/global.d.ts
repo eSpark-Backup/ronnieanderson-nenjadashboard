@@ -10,6 +10,7 @@ declare global {
     interface IDynamicTable<T> {
         title: string;
         rightNode?: ReactNode;
+        upperNode?: ReactNode;
         data: T[];
         columns: IColumn[];
         isLoading: boolean;
