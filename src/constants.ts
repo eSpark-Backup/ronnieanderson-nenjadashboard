@@ -779,3 +779,101 @@ export const dailyPackageProfitData: IIncomePackageProfit[] = [
     tradingProfit: "$15,000.00",
   },
 ]
+
+export const rankBonus: IRankBonus[] = [
+  {
+    id: "1",
+    rank: "Sapphire",
+    qualification: {
+      totalPrice: 5000,
+      myPrice: 1000,
+      checks: null,
+    },
+    reward: '25'
+  },
+  {
+    id: "2",
+    rank: "Sapphire 25",
+    qualification: {
+      totalPrice: 10000,
+      myPrice: 5000,
+      checks: null,
+    },
+    reward: '250'
+  },
+  {
+    id: "3",
+    rank: "Emerald",
+    qualification: {
+      totalPrice: 25000,
+      myPrice: 25000,
+      checks: null,
+    },
+    reward: '500'
+  },
+  {
+    id: "4",
+    rank: "Diamond",
+    qualification: {
+      totalPrice: 50000,
+      myPrice: 35000,
+      checks: [
+        { name: "Ruby", value: true },
+        { name: "Emerald", value: false }
+      ],
+    },
+    reward: 'Diamond Retreat'
+  },
+  {
+    id: "5",
+    rank: "Double Diamond",
+    qualification: {
+      totalPrice: 50000,
+      myPrice: 35000,
+      checks: [
+        { name: "Emerald", value: true },
+        { name: "Emerald", value: false }
+      ],
+    },
+    reward: 'Porsche Car'
+  },
+  {
+    id: "6",
+    rank: "Double Diamond",
+    qualification: {
+      totalPrice: 50000,
+      myPrice: 35000,
+      checks: [
+        { name: "Diamond", value: true },
+        { name: "Emerald", value: false }
+      ],
+    },
+    reward: 'Dubai Trip'
+  },
+  {
+    id: "7",
+    rank: "Triple Diamond",
+    qualification: {
+      totalPrice: 50000,
+      myPrice: 35000,
+      checks: [
+        { name: "Diamond", value: true },
+        { name: "Emerald", value: false }
+      ],
+    },
+    reward: 'Porsche Car'
+  },
+  {
+    id: "8",
+    rank: "Crown Diamond",
+    qualification: {
+      totalPrice: 50000,
+      myPrice: 50000,
+      checks: [
+        { name: "Diamond", value: true },
+        { name: "Emerald", value: true }
+      ],
+    },
+    reward: 'Maldives Trip'
+  },
+]

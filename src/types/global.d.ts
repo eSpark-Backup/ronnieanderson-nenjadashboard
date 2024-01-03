@@ -20,6 +20,7 @@ declare global {
     interface IColumn {
         name: string;
         key: string;
+        boldRank?: boolean;
         component?: (any: any) => ReactNode;
         width?: string;
     }
@@ -131,5 +132,18 @@ declare global {
     interface IIncomePackageProfit extends IBase {
         date: string,
         tradingProfit: string,
+    }
+
+    interface IRankBonus extends IBase {
+        rank: string;
+        qualification: {
+            totalPrice: number;
+            myPrice: number;
+            checks: null | {
+                name: string;
+                value: boolean;
+            }[]
+        };
+        reward: string;
     }
 }
