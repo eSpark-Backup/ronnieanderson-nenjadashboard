@@ -35,7 +35,18 @@ import doubleDiamond from "./Double Diamond.png"
 import ruby from "./Ruby.png"
 import sapphire25 from "./25 Sapphire.png"
 import sapphire from "./Sapphire.png"
-import crownDiamond from "./Royal Crown Diamond.png"
+import emerald from "./emerald.png"
+import ruby2 from "./RANK ICONS_Final_Ruby.png"
+import tripleDiamond from "./Triple Diamond.png"
+import crownDiamond from "./Crown Diamond.png"
+import royalCrownDiamond from "./Royal Crown Diamond.png"
+import boldDoubleDiamond from "./bold Double Diamond.png"
+import boldSapphire from "./bold Sapphire.png"
+import boldSapphire25 from "./bold 25 Sapphire.png"
+import diamondRetreat from "./Diamond Retreat.png"
+import dubaiTrip from "./Dubai Trip.png"
+import porscheCar from "./Porsche Car.png"
+import maldivesTrip from "./Maldives Trip.png"
 import calendar from "./calander.png"
 import filter from "./filter.png"
 import packageBg from "./Package-bg.png"
@@ -74,6 +85,17 @@ export {
     NoData,
     diamondRank,
     doubleDiamond,
+    tripleDiamond,
+    boldDoubleDiamond,
+    boldSapphire,
+    boldSapphire25,
+    diamondRetreat,
+    dubaiTrip,
+    porscheCar,
+    maldivesTrip,
+    royalCrownDiamond,
+    emerald,
+    ruby2,
     ruby,
     sapphire25,
     sapphire,
