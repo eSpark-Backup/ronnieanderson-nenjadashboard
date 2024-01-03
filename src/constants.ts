@@ -124,6 +124,14 @@ export const sidebarRoutes = [
     type: "link",
   },
   {
+    href: `/deposite`,
+    icon: PackageIcon,
+    activeIcon: PackageIcon,
+    title: "Deposite",
+    childs: null,
+    type: "link",
+  },
+  {
     href: `/team`,
     icon: TeamIcon,
     activeIcon: TeamIcon,
@@ -780,6 +788,65 @@ export const dailyPackageProfitData: IIncomePackageProfit[] = [
   },
 ]
 
+
+export const depositeData: IDeposite[] = [
+  {
+    id: "1",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$250.00",
+    status: false,
+  },
+  {
+    id: "2",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$2,500.00",
+    status: true,
+  },
+  {
+    id: "3",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$10,000.00",
+    status: false,
+  },
+  {
+    id: "4",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$10,000.00",
+    status: true,
+  },
+  {
+    id: "5",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$2,500.00",
+    status: false,
+  },
+  {
+    id: "6",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$500.00",
+    status: true,
+  },
+  {
+    id: "7",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$10,000.00",
+    status: false,
+  },
+  {
+    id: "8",
+    date: "17/11/2023",
+    address: "sd78542sd2265sd78542sd2265",
+    amount:"$15,000.00",
+    status: true,
+  }
+]
 export const rankBonus: IRankBonus[] = [
   {
     id: "1",

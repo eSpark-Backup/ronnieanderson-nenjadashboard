@@ -10,6 +10,7 @@ declare global {
     interface IDynamicTable<T> {
         title: string;
         rightNode?: ReactNode;
+        upperNode?: ReactNode;
         data: T[];
         columns: IColumn[];
         isLoading: boolean;
@@ -133,7 +134,12 @@ declare global {
         date: string,
         tradingProfit: string,
     }
-
+    interface IDeposite extends IBase {
+        date: string,
+        address: string,
+        amount:String,
+        status:boolean
+    }
     interface IRankBonus extends IBase {
         rank: string;
         qualification: {
