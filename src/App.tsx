@@ -15,8 +15,7 @@ import {
   Ledger,
   Payout,
   MarketingMaterial,
-  Support,
-  DailyPackageProfit
+  Support
 } from './pages';
 import LoggedinLayout from './layout';
 
@@ -36,7 +35,6 @@ function App() {
         { path: "/team/downline", element: <Downline /> },
         { path: "/income/referral", element: <Referral /> },
         { path: "/income/team-bonus", element: <TeamBonus /> },
-        { path: "/income/daily-package-profit", element: <DailyPackageProfit /> },
         { path: "/income/rank-bonus", element: <RankBonus /> },
         { path: "/ledger", element: <Ledger /> },
         { path: "/payout", element: <Payout /> },

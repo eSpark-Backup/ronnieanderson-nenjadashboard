@@ -158,10 +158,6 @@ export const sidebarRoutes = [
         href: "/income/team-bonus",
       },
       {
-        title: "Daily Package Profit",
-        href: "/income/daily-package-profit",
-      },
-      {
         title: "Rank Bonus",
         href: "/income/rank-bonus",
       },
@@ -635,7 +631,7 @@ export const newTeamData = [
     name: "referralID"
   },
   {
-    hasButton: true
+    hasButton:true
   },
   {
     label: "First Name",
@@ -693,90 +689,6 @@ export const newTeamData = [
     required: false,
     placeholder: "Enter your confirm password",
     name: "confirmPassword"
-  },
-]
-
-
-export const dailyPackageProfitData: IIncomePackageProfit[] = [
-  {
-    id: "1",
-    date: "17/11/2023",
-    tradingProfit: "$75,000.00",
-  },
-  {
-    id: "2",
-    date: "17/11/2023",
-    tradingProfit: "$50,000.00",
-  },
-  {
-    id: "3",
-    date: "17/11/2023",
-    tradingProfit: "$100,000.00",
-  },
-  {
-    id: "4",
-    date: "17/11/2023",
-    tradingProfit: "$10,000.00",
-  },
-  {
-    id: "5",
-    date: "17/11/2023",
-    tradingProfit: "$15,000.00",
-  },
-  {
-    id: "6",
-    date: "17/11/2023",
-    tradingProfit: "$75,000.00",
-  },
-  {
-    id: "7",
-    date: "17/11/2023",
-    tradingProfit: "$50,000.00",
-  },
-  {
-    id: "8",
-    date: "17/11/2023",
-    tradingProfit: "$75,000.00",
-  },
-  {
-    id: "9",
-    date: "17/11/2023",
-    tradingProfit: "$50,000.00",
-  },
-  {
-    id: "10",
-    date: "17/11/2023",
-    tradingProfit: "$15,000.00",
-  },
-  {
-    id: "11",
-    date: "17/11/2023",
-    tradingProfit: "$15,000.00",
-  },
-  {
-    id: "12",
-    date: "17/11/2023",
-    tradingProfit: "$75,000.00",
-  },
-  {
-    id: "13",
-    date: "17/11/2023",
-    tradingProfit: "$50,000.00",
-  },
-  {
-    id: "14",
-    date: "17/11/2023",
-    tradingProfit: "$75,000.00",
-  },
-  {
-    id: "15",
-    date: "17/11/2023",
-    tradingProfit: "$50,000.00",
-  },
-  {
-    id: "15",
-    date: "17/11/2023",
-    tradingProfit: "$15,000.00",
   },
 ]
 

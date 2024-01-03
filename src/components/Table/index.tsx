@@ -96,7 +96,7 @@ const DynamicTable = <T extends IBase>({
                 </Stack>
             </>
         ) : (
-            <Typography width={column?.width} variant="body2">{cell}</Typography>
+            <Typography variant="body2">{cell}</Typography>
         );
     };
 
