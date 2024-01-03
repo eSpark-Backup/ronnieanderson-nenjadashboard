@@ -1,10 +1,17 @@
 import {
     diamondRank,
     doubleDiamond,
+    tripleDiamond,
+    diamond,
+    diamond2,
     ruby,
     sapphire25,
     sapphire,
-    crownDiamond
+    crownDiamond,
+    royalCrownDiamond,
+    boldDoubleDiamond,
+    boldSapphire,
+    boldSapphire25,
 } from "../assets"
 
 export const rankingImages: any = {
@@ -13,5 +20,15 @@ export const rankingImages: any = {
     "ruby": ruby,
     "sapphire-25": sapphire25,
     "sapphire": sapphire,
-    "royal-crown-diamond": crownDiamond,
+    "royal-crown-diamond": royalCrownDiamond,
+}
+
+export const rankingBoldImages: any = {
+    "diamond": diamond2,
+    "double-diamond": boldDoubleDiamond,
+    "triple-diamond": tripleDiamond,
+    "emerald": diamond,
+    "sapphire-25": boldSapphire25,
+    "sapphire": boldSapphire,
+    "crown-diamond": crownDiamond,
 }

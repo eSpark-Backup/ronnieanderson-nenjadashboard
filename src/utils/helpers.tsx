@@ -1,5 +1,6 @@
 import { countriesFlags } from "./countriesFlag";
-import { rankingImages } from "./rankImages";
+import { rankingBoldImages, rankingImages } from "./rankImages";
+import { rewardImages } from "./rewardImages";
 
 export function getValue<T>(item: T, keys: any): string {
     if (keys.length === 1) {
@@ -18,8 +19,13 @@ export const getCountryFlag = (countryName: string) => {
     return countriesFlags[countryName]
 }
 
-export const getRankImage = (rank: string) => {
+export const getRankImage = (rank: string, bold: boolean | undefined) => {
     const rankFormatted = rank && rank.toLowerCase().replaceAll(" ", "-")
-    return rankingImages[rankFormatted]
+    return bold ? rankingBoldImages[rankFormatted] : rankingImages[rankFormatted]
 }
 
+
+export const getRewardImages = (reward: string) => {
+    const rewardFormatted = reward && reward.toLowerCase().replaceAll(" ", "-")
+    return rewardImages[rewardFormatted]
+}
