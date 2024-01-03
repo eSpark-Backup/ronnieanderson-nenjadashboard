@@ -128,4 +128,8 @@ declare global {
         settledBusiness: string,
         amount: string,
     }
+    interface IIncomePackageProfit extends IBase {
+        date: string,
+        tradingProfit: string,
+    }
 }
