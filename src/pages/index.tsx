@@ -4,12 +4,11 @@ import Dashboard from "./dashboard"
 import { Account, Fa } from "./profile"
 import Package from "./package"
 import { New, Direct, Downline } from "./team"
-import { Referral, TeamBonus, RankBonus } from "./income"
+import { Referral, TeamBonus, RankBonus, DailyPackageProfit } from "./income"
 import Ledger from "./ledger"
 import Payout from "./payout"
 import MarketingMaterial from "./marketing-material"
 import Support from "./support"
-import DailyPackageProfit from "./income/daily-package-profit"
 import Deposite from "./deposite"
 
 
