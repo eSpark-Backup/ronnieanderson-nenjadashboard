@@ -129,6 +129,10 @@ declare global {
         settledBusiness: string,
         amount: string,
     }
+    interface IIncomePackageProfit extends IBase {
+        date: string,
+        tradingProfit: string,
+    }
 
     interface IRankBonus extends IBase {
         rank: string;
