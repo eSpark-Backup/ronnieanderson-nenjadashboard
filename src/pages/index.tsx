@@ -9,6 +9,7 @@ import Ledger from "./ledger"
 import Payout from "./payout"
 import MarketingMaterial from "./marketing-material"
 import Support from "./support"
+import Deposite from "./deposite"
 
 
 export {
@@ -28,5 +29,6 @@ export {
     Payout,
     MarketingMaterial,
     Support,
-    DailyPackageProfit
+    DailyPackageProfit,
+    Deposite,
 }

@@ -16,7 +16,8 @@ import {
   Payout,
   MarketingMaterial,
   Support,
-  DailyPackageProfit
+  DailyPackageProfit,
+  Deposite
 } from './pages';
 import LoggedinLayout from './layout';
 
@@ -31,6 +32,7 @@ function App() {
         { path: "/profile/account", element: <Account /> },
         { path: "/profile/2fa", element: <Fa /> },
         { path: "/package", element: <Package /> },
+        { path: "/deposite", element: <Deposite /> },
         { path: "/team/new", element: <New /> },
         { path: "/team/direct", element: <Direct /> },
         { path: "/team/downline", element: <Downline /> },

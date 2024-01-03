@@ -19,6 +19,7 @@ import { styles } from "../../utils/styles";
 const DynamicTable = <T extends IBase>({
     title,
     rightNode,
+    upperNode,
     data,
     columns,
     isLoading,
@@ -102,6 +103,7 @@ const DynamicTable = <T extends IBase>({
 
     return (
         <CardLayout>
+            {upperNode ? upperNode : null}
             <Stack gap={2} direction={{ xs: "column", sm: "row" }} alignItems="center" justifyContent="space-between" p={2}>
                 <Typography variant="h6">{title}</Typography>
                 {rightNode}
