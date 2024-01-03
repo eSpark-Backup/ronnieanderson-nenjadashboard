@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import CardLayout from "../Card/CardLayout/CardLayout";
 import { NoData } from "../../assets";
-import { getCountryFlag, getRankImage, getValue } from "../../utils/helpers";
+import { getCountryFlag, getRankImage, getRewardImages, getValue } from "../../utils/helpers";
 import { styles } from "../../utils/styles";
 
 const DynamicTable = <T extends IBase>({
@@ -38,8 +38,9 @@ const DynamicTable = <T extends IBase>({
             name: string;
             component?: (string: any) => ReactNode;
             width?: string;
+            boldRank?: boolean;
         },
-        item: T
+        item: any
     ): ReactNode | string => {
         const cell = column.component
             ? column.component(item)
@@ -74,12 +75,28 @@ const DynamicTable = <T extends IBase>({
         ) : column.key[0] === "rank" ? (
             <>
                 <Stack direction="row" alignItems="center" justifyContent="flex-start" gap={2}>
-                    {cell && getRankImage(cell) && <img className={classes.objectNone} src={getRankImage(cell)} width={40} height={40} alt="flag" />}
-                    <Typography variant="body2">{cell}</Typography>
+                    {cell && getRankImage(cell, column?.boldRank) && <img className={column?.boldRank ? classes.objectContain : classes.objectNone} src={getRankImage(cell, column?.boldRank)} width={column?.boldRank ? 50 : 40} height={column?.boldRank ? 50 : 40} alt="flag" />}
+                    <Typography variant="body2" fontWeight={column?.boldRank ? 600 : 400}>{cell}</Typography>
+                </Stack>
+            </>
+        ) : column.key[0] === "reward" ? (
+            <>
+                <Stack direction="column" alignItems="center" justifyContent="center" gap={2}>
+                    {cell && getRewardImages(cell) &&
+                        <img
+                            className={[classes.objectContain, item.qualification.totalPrice === item.qualification.myPrice ? classes.opacity : classes.noOpacity].join(" ")}
+                            src={getRewardImages(cell)}
+                            width={150}
+                            height={90}
+                            alt="reward"
+                        />}
+                    {cell && (getRewardImages(cell) ?
+                        <Typography variant="body2" fontWeight={400}>{cell}</Typography> :
+                        <Typography className={[classes.rewardAmount, item.qualification.totalPrice === item.qualification.myPrice ? classes.opacity : classes.noOpacity].join(" ")}>$ {cell}</Typography>)}
                 </Stack>
             </>
         ) : (
-            <Typography variant="body2">{cell}</Typography>
+            <Typography width={column?.width} variant="body2">{cell}</Typography>
         );
     };
 
@@ -100,14 +117,15 @@ const DynamicTable = <T extends IBase>({
                             <TableRow>
                                 {extendedColumns?.map((column, index) => (
                                     <TableCell
+                                        className={index === 0 ? classes.paddingLeft5 : classes.paddingLeft2}
                                         key={`${index}`}
                                     >
                                         <Stack
                                             direction={"row"}
                                             alignItems={"center"}
                                             justifyContent={
-                                                column.key[0] === "action"
-                                                    ? "flex-end"
+                                                column.key[0] === "reward"
+                                                    ? "center"
                                                     : "space-between"
                                             }
                                         >
@@ -123,8 +141,8 @@ const DynamicTable = <T extends IBase>({
                             <TableBody>
                                 {data?.map((item, index) => (
                                     <TableRow className={index % 2 === 0 ? '' : classes.evenRow} hover key={item.id as string}>
-                                        {extendedColumns?.map((column) => (
-                                            <TableCell key={column.key.join(".")}>
+                                        {extendedColumns?.map((column, index) => (
+                                            <TableCell className={index === 0 ? classes.paddingLeft5 : classes.paddingLeft2} key={column.key.join(".")}>
                                                 {generateCell(column, item)}
                                             </TableCell>
                                         ))}

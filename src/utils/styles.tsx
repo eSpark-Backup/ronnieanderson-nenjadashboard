@@ -28,6 +28,32 @@ const tableStyle = makeStyles({
     objectNone: {
         objectFit: "none"
     },
+    objectContain: {
+        objectFit: "contain"
+    },
+    rewardAmount: {
+        width: "150px",
+        height: "60px",
+        lineHeight: "60px !important",
+        textAlign: "center",
+        color: "#fff !important",
+        fontSize: "25px !important",
+        fontWeight: "600 !important",
+        backgroundColor: "#8DC63F",
+        borderRadius: "11px"
+    },
+    opacity: {
+        opacity: 1
+    },
+    noOpacity: {
+        opacity: 0.3
+    },
+    paddingLeft5: {
+        paddingLeft: "40px !important",
+    },
+    paddingLeft2: {
+        paddingLeft: "16px",
+    },
 });
 
 const packageStyle = makeStyles({
@@ -869,6 +895,47 @@ const depositeStyle = makeStyles({
         mainContainer:{
             padding: "20px 5px 20px 5px"
         }
+    }
+})
+const rankRewardStyles = makeStyles({
+    checkBox: {
+        "& svg": {
+            color: "#8DC63F !important"
+        }
+    },
+    progress: {
+        background: "#E2E2E2",
+        borderRadius: "100px",
+        padding: "4px 24px",
+        position: "relative"
+    },
+    progressFill: {
+        padding: "4px",
+        textAlign: "center",
+        position: "absolute",
+        top: "0px",
+        left: "0px",
+        background: "#8DC63F",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    borderRadiusFull: {
+        borderRadius: "100px"
+    },
+    borderRadiusHalf: {
+        borderRadius: "100px 0 0 100px"
+    },
+    flex: {
+        display: "flex"
+    },
+    none: {
+        display: "none"
+    },
+    opacity: {
+        opacity: 1
+    },
+    noOpacity: {
+        opacity: 0.3
     },
 })
 
@@ -886,6 +953,7 @@ export const styles = {
     authStyles,
     layoutStyles,
     sidebarStyles,
-    depositeStyle
+    depositeStyle,
+    rankRewardStyles,
 }
 
